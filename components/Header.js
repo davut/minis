@@ -1,20 +1,14 @@
 import Link from "next/link";
 import React, { useState } from "react";
-// import Logo from "./Logo";
-// import { usePathname } from "next/navigation";
+
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { CancelIcon } from "./Icon";
-// import { useIntl } from "react-intl";
-
-// import UseThemesSwitcher from "./Hooks/UseThemesSwitcher";
+import { useTranslation } from "next-i18next";
 
 const CustomLink = ({ href, title, className = "" }) => {
-  const { asPath, push } = useRouter();
-  const handleChangeLanguage = (locale) => {
-    push(router.pathname, router.asPath, { locale });
-  };
+  const { asPath } = useRouter();
 
   //   console.log(pathname);
 
@@ -41,8 +35,9 @@ const CustomLink = ({ href, title, className = "" }) => {
 };
 
 const Header = () => {
-  //   const [mode, setmode] = UseThemesSwitcher();
-  // const intl = useIntl();
+  const { t } = useTranslation("en");
+  const { locale, push } = useRouter();
+  console.log(t("navbar.about", locale));
 
   const [isOpen, setisOpen] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -52,6 +47,10 @@ const Header = () => {
   };
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
+  };
+
+  const handleChangeLanguage = (locale) => {
+    push(router.pathname, router.asPath, { locale });
   };
 
   return (
@@ -94,12 +93,12 @@ const Header = () => {
             <nav className=" mr-16">
               <CustomLink
                 href="/about"
-                // title={intl.formatMessage({ id: "navbar.about" })}
+                title={t("navbar.about")}
                 className="mx-2 font-bold text-[15px] leading-24 text-yellow-500"
               />
               <CustomLink
                 href="/products"
-                // title={intl.formatMessage({ id: "navbar.products" })}
+                title={t("navbar.products")}
                 className="mx-2"
               />
               <CustomLink
@@ -216,7 +215,4 @@ const Header = () => {
     </>
   );
 };
-
 export default Header;
-
-// hounorabl maroof from lalupon

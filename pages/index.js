@@ -1,8 +1,23 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
-  return <main>hello world</main>;
+function Home() {
+  const { t } = useTranslation("common");
+
+  return <main>hello world {t("navbar.about")} </main>;
 }
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
+
+export default Home;

@@ -1,11 +1,8 @@
-import { useRouter } from "next/router";
+import { appWithTranslation } from "next-i18next";
 import Layout from "../components/Layout";
 import "@/styles/globals.css";
-import { useState, useEffect } from "react";
-// import translations from "../locales";
-import { IntlProvider } from "react-intl";
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   // const router = useRouter();
   // const [locale, setLocale] = useState(router.locale);
   // const [messages, setMessages] = useState({});
@@ -24,3 +21,4 @@ export default function App({ Component, pageProps }) {
     // </IntlProvider>
   );
 }
+export default appWithTranslation(App);
