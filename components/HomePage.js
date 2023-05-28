@@ -5,8 +5,16 @@ const HomePage = () => {
   const { t } = useTranslation("common");
 
   return (
-    <div>
-      {t("navbar.about")} {t("hello worls")}
+    <div className="heroPage w-full h-full md:h-screen">
+      <div className="cont mt-5">
+        {/* left hero */}
+        <div>
+          {" "}
+          <h1>{t("home.h1")}</h1>
+        </div>
+        {/* right hero */}
+        <div></div>
+      </div>
     </div>
   );
 };

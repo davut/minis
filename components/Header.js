@@ -91,11 +91,7 @@ const Header = () => {
           {/* Desktop nav */}
           <div className=" justify-between items-center hidden lg:flex">
             <nav className=" mr-16">
-              <CustomLink
-                href="/about"
-                title={t("navbar.about")}
-                className="mx-2 font-bold text-[15px] leading-24 text-yellow-500"
-              />
+              <CustomLink href="/" title={t("navbar.about")} className="mx-2" />
               <CustomLink
                 href="/products"
                 title={t("navbar.products")}
