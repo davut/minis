@@ -114,18 +114,9 @@ const Header = () => {
               />
             </nav>
             <div className="flex  items-center">
-              {/* <p className=" leading-24 text-gray-600 font-bold text-[16px] mr-2">
-                EN
-              </p>
-              <Image
-                src="/images/VectorLanguage.svg"
-                width="700"
-                height="700"
-                className="w-5"
-              /> */}
               <div className="flex items-center relative">
-                <p className="leading-24 text-gray-600 font-bold text-[16px] mr-2">
-                  EN
+                <p className="leading-24 text-gray-600 font-bold text-[16px] mr-2 uppercase">
+                  {locale}
                 </p>
                 <div onClick={togglePopup} className="w-5">
                   {isPopupOpen ? (
