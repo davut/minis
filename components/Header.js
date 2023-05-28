@@ -5,11 +5,17 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { CancelIcon } from "./Icon";
+// import { useIntl } from "react-intl";
 
 // import UseThemesSwitcher from "./Hooks/UseThemesSwitcher";
 
 const CustomLink = ({ href, title, className = "" }) => {
-  const { asPath } = useRouter();
+  const { asPath, push } = useRouter();
+  const handleChangeLanguage = (locale) => {
+    push(router.pathname, router.asPath, { locale });
+  };
+
   //   console.log(pathname);
 
   return (
@@ -36,10 +42,18 @@ const CustomLink = ({ href, title, className = "" }) => {
 
 const Header = () => {
   //   const [mode, setmode] = UseThemesSwitcher();
+  // const intl = useIntl();
+
   const [isOpen, setisOpen] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   const handleClick = () => {
     setisOpen(!isOpen);
   };
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
   return (
     <>
       <div className="w-full py-1  dark:text-light border-b-[1px] border-transparent">
@@ -80,15 +94,27 @@ const Header = () => {
             <nav className=" mr-16">
               <CustomLink
                 href="/about"
-                title="About us"
+                // title={intl.formatMessage({ id: "navbar.about" })}
                 className="mx-2 font-bold text-[15px] leading-24 text-yellow-500"
               />
-              <CustomLink href="/products" title="Products" className="mx-2" />
-              <CustomLink href="/gallery" title="Gallery" className="mx-2" />
-              <CustomLink href="/contact" title="Contact us" className="mx-2" />
+              <CustomLink
+                href="/products"
+                // title={intl.formatMessage({ id: "navbar.products" })}
+                className="mx-2"
+              />
+              <CustomLink
+                href="/gallery"
+                // title={intl.formatMessage({ id: "navbar.gallery" })}
+                className="mx-2"
+              />
+              <CustomLink
+                href="/contact"
+                // title={intl.formatMessage({ id: "navbar.contact" })}
+                className="mx-2"
+              />
             </nav>
             <div className="flex  items-center">
-              <p className=" leading-24 text-gray-600 font-bold text-[16px] mr-2">
+              {/* <p className=" leading-24 text-gray-600 font-bold text-[16px] mr-2">
                 EN
               </p>
               <Image
@@ -96,7 +122,54 @@ const Header = () => {
                 width="700"
                 height="700"
                 className="w-5"
-              />
+              /> */}
+              <div className="flex items-center relative">
+                <p className="leading-24 text-gray-600 font-bold text-[16px] mr-2">
+                  EN
+                </p>
+                <div onClick={togglePopup} className="w-5">
+                  {isPopupOpen ? (
+                    <CancelIcon className={"absolute right-0 top-0 text-lg"} />
+                  ) : (
+                    <motion.img
+                      src="/images/VectorLanguage.svg"
+                      width="700"
+                      height="700"
+                      className="w-5 cursor-pointer"
+                      whileHover={{ scale: 1.1 }}
+                    />
+                  )}
+                </div>
+                {isPopupOpen && (
+                  <motion.div
+                    className="absolute top-0 right-0 mt-8 mr-2 bg-white shadow-lg rounded-lg p-4"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.5 }}
+                  >
+                    <ul className="space-y-2">
+                      <li
+                        className="text-gray-800 cursor-pointer"
+                        onClick={() => handleChangeLanguage("en")}
+                      >
+                        English
+                      </li>
+                      <li
+                        className="text-gray-800 cursor-pointer"
+                        onClick={() => handleChangeLanguage("ru")}
+                      >
+                        Russian
+                      </li>
+                      <li
+                        className="text-gray-800 cursor-pointer"
+                        onClick={() => handleChangeLanguage("tm")}
+                      >
+                        Turkmen
+                      </li>
+                    </ul>
+                  </motion.div>
+                )}
+              </div>
             </div>
           </div>
 
