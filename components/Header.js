@@ -8,18 +8,23 @@ import { useRouter } from "next/router";
 // import UseThemesSwitcher from "./Hooks/UseThemesSwitcher";
 
 const CustomLink = ({ href, title, className = "" }) => {
-  const pathname = useRouter();
+  const { asPath } = useRouter();
+  //   console.log(pathname);
 
   return (
     <Link
       href={href}
-      className={`${className} relative group hover:text-[#efced9] `}
+      className={`${className} relative group w-78 h-24 font-sfprodisplay font-normal text-20  leading-24 text-gray-600`}
     >
       {title}
       <span
         className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
          dark:bg-light
-      ${pathname === href ? "w-full" : "w-0"}
+      ${
+        asPath === href
+          ? "w-full font-bold text-20 leading-24 text-yellow-500"
+          : "w-0"
+      }
       `}
       >
         &nbsp;
@@ -36,18 +41,18 @@ const Header = () => {
   };
   return (
     <>
-      <div className="w-full py-8  dark:text-light border-b-[1px] border-transparent dark:border-light bg-green-300">
+      <div className="w-full py-1  dark:text-light border-b-[1px] border-transparent">
         <div className="cont font-medium flex items-center justify-between py-4 relative">
           <div>
             <img src="/images/Group.png" alt="" />
           </div>
           {/* toggle */}
-          {/* <button
-            className="flex flex-col justify-center items-center lg:hidden fixed z-50"
+          <button
+            className="flex flex-col justify-center items-center lg:hidden fddixed z-50"
             onClick={handleClick}
           >
             <span
-              className={`bg-dark dark:bg-light block transition-all duration-300 ease-in-out h-0.5 w-6 rounded-sm -translate-y-0.5 ${
+              className={`bg-dark block transition-all duration-300 ease-in-out h-0.5 w-6 rounded-sm -translate-y-0.5 ${
                 isOpen ? "rotate-45 translate-y-1" : " -translate-y-0.5"
               }`}
             ></span>
@@ -61,15 +66,15 @@ const Header = () => {
                 isOpen ? "-rotate-45 -translate-y-1" : " translate-y-0.5"
               } `}
             ></span>
-          </button> */}
+          </button>
 
           {/* Desktop nav */}
-          <div className="w-full justify-between items-center hidden lg:flex">
+          <div className="w-fulfl justify-between items-center hidden lg:flex">
             <nav>
-              <CustomLink href="/" title="Home" className="mx-2" />
-              <CustomLink href="/about" title="About" className="mx-2" />
-              <CustomLink href="/project" title="Project" className="mx-2" />
-              <CustomLink href="/resume" title="Resume" className="mx-2" />
+              <CustomLink href="/about" title="About us" className="mx-2" />
+              <CustomLink href="/products" title="Products" className="mx-2" />
+              <CustomLink href="/gallery" title="Gallery" className="mx-2" />
+              <CustomLink href="/contact" title="Contact us" className="mx-2" />
             </nav>
           </div>
 
@@ -108,9 +113,6 @@ const Header = () => {
               </nav>
             </motion.div>
           ) : null}
-          {/* <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-            <Logo />
-          </div> */}
         </div>
 
         {/* <ShowIcon /> */}
