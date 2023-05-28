@@ -35,9 +35,9 @@ const CustomLink = ({ href, title, className = "" }) => {
 };
 
 const Header = () => {
-  const { t } = useTranslation("en");
-  const { locale, push } = useRouter();
-  console.log(t("navbar.about", locale));
+  const { t } = useTranslation("common");
+  const { locale, push, pathname, asPath } = useRouter();
+  // console.log(t("navbar.about", locale, "mmee"));
 
   const [isOpen, setisOpen] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -50,7 +50,7 @@ const Header = () => {
   };
 
   const handleChangeLanguage = (locale) => {
-    push(router.pathname, router.asPath, { locale });
+    push(pathname, asPath, { locale });
   };
 
   return (
@@ -103,12 +103,13 @@ const Header = () => {
               />
               <CustomLink
                 href="/gallery"
-                // title={intl.formatMessage({ id: "navbar.gallery" })}
+                title={t("navbar.about")}
                 className="mx-2"
               />
               <CustomLink
                 href="/contact"
                 // title={intl.formatMessage({ id: "navbar.contact" })}
+                title={t("navbar.contact")}
                 className="mx-2"
               />
             </nav>
@@ -161,7 +162,7 @@ const Header = () => {
                       </li>
                       <li
                         className="text-gray-800 cursor-pointer"
-                        onClick={() => handleChangeLanguage("tm")}
+                        onClick={() => handleChangeLanguage("tu")}
                       >
                         Turkmen
                       </li>
