@@ -4,7 +4,11 @@ import React from "react";
 const HomePage = () => {
   const { t } = useTranslation("common");
 
-  return <div>{t("navbar.about")}</div>;
+  return (
+    <div>
+      {t("navbar.about")} {t("hello worls")}
+    </div>
+  );
 };
 
 export default HomePage;

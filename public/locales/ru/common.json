@@ -2,5 +2,7 @@
   "navbar.about": "О нас",
   "navbar.products": "Продукты",
   "navbar.gallery": "Галерея",
-  "navbar.contact": "Свяжитесь с нами"
+  "navbar.contact": "Свяжитесь с нами",
+      "home.h1" : "Это страница продукта"
+
 }

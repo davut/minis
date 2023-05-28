@@ -2,6 +2,8 @@
   "navbar.about": "About us",
   "navbar.products": "Products",
   "navbar.gallery": "Gallery",
-  "navbar.contact": "Contact us"
+  "navbar.contact": "Contact us",
+  "home.h1" : "This is product page"
 
+  
 }
