@@ -110,11 +110,14 @@ const Header = () => {
               />
             </nav>
             <div className="flex  items-center">
-              <div className="flex items-center relative">
+              <div
+                className="flex items-center relative cursor-pointer"
+                onClick={togglePopup}
+              >
                 <p className="leading-24 text-gray-600 font-bold text-[16px] mr-2 uppercase">
                   {locale}
                 </p>
-                <div onClick={togglePopup} className="w-5">
+                <div className="w-5">
                   {isPopupOpen ? (
                     <CancelIcon className={"absolute right-0 top-0 text-lg"} />
                   ) : (
@@ -129,12 +132,12 @@ const Header = () => {
                 </div>
                 {isPopupOpen && (
                   <motion.div
-                    className="absolute top-0 right-0 mt-8 mr-2 bg-white shadow-lg rounded-lg p-4"
+                    className="absolute top-0 right-0 mt-8 mr-2 bg-white rounded-lg p-4 z-50 shadow"
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.5 }}
                   >
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 ">
                       <li
                         className="text-gray-800 cursor-pointer"
                         onClick={() => handleChangeLanguage("en")}

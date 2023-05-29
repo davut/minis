@@ -10,3 +10,12 @@
 .heroPage {
   background: linear-gradient(281.93deg, #f9c600 0%, #fcd000 100%);
 }
+
+.FlexCenter {
+  @apply flex justify-center items-center;
+}
+
+.heroRightText {
+  @apply font-extrabold  text-white;
+}
+/* font-sf-pro-display */
