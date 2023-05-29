@@ -15,7 +15,7 @@ const CustomLink = ({ href, title, className = "" }) => {
   return (
     <Link
       href={href}
-      className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px]  leading-24 text-gray-600 ${
+      className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 ${
         asPath === href
           ? "font-bold text-[15px] leading-24 text-yellow-500"
           : ""

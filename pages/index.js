@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import HomePage from "@/components/HomePage";
+import OurStory from "@/components/OurStory";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,6 +14,7 @@ function Home() {
     <main>
       {/* hello world {t("navbar.about")} */}
       <HomePage />
+      <OurStory />
     </main>
   );
 }
