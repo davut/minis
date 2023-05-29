@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import HomePage from "@/components/HomePage";
 import OurStory from "@/components/OurStory";
+import OurVision from "@/components/OurVision";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ function Home() {
       {/* hello world {t("navbar.about")} */}
       <HomePage />
       <OurStory />
+      <OurVision />
     </main>
   );
 }
