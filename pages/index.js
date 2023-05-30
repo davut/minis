@@ -5,6 +5,7 @@ import { useTranslation } from "next-i18next";
 import HomePage from "@/components/HomePage";
 import OurStory from "@/components/OurStory";
 import OurVision from "@/components/OurVision";
+import OurMission from "@/components/OurMission";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ function Home() {
       <HomePage />
       <OurStory />
       <OurVision />
+      <OurMission />
     </main>
   );
 }

@@ -6,6 +6,10 @@
   max-width: 80%;
   margin: 0 auto;
 }
+.contLg {
+  max-width: 70%;
+  margin: 0 auto;
+}
 
 .heroPage {
   background: linear-gradient(281.93deg, #f9c600 0%, #fcd000 100%);

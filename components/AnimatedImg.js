@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const AnimatedImg = ({ path, alt, className = "", direction = "700" }) => {
   return (
     <motion.div
-      className="overflow-x-hidden"
+      className="overflow-x-hidden overflow-hidden"
       initial={{ x: direction }}
       animate={{ x: 0 }}
       transition={{ delay: 0.3, staggerChildren: 0.08 }}
