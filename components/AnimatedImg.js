@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const AnimatedImg = ({ path, alt, className = "", direction = "100%" }) => {
+const AnimatedImg = ({ path, alt, className = "", direction = "700" }) => {
   return (
     <motion.div
       className="overflow-x-hidden"
       initial={{ x: direction }}
-      whileInView={{ x: 0 }}
+      animate={{ x: 0 }}
       transition={{ delay: 0.3, staggerChildren: 0.08 }}
     >
       {/* <HeroPageAnimatedLeft /> */}

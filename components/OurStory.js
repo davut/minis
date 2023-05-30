@@ -21,7 +21,7 @@ const OurStory = () => {
               path="/images/RectangleSnacks 34.svg"
               alt="snacks"
               className=" absolute w-full h-full -mt-5 -ml-5 object-cover"
-              direction="-100"
+              // direction="-100%"
             />
           </div>
         </div>

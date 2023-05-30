@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { Font } from "next/font/google";
 import { motion } from "framer-motion";
+import AnimatedImg from "./AnimatedImg";
 
 // const font = Font.load("SF Pro Display");
 
@@ -108,16 +109,34 @@ const HomePage = () => {
             <p className="heroRightText mb-10 absolute ml-12 -top-5 text-7xl">
               Dragee
             </p>
-
             <p className="heroRightText -rotate-90 absolute -left-20 xl:left-5 text-9xl">
               Mini
             </p>
-            <Image
+            {/* <Image
               src="/images/m&m.png"
               width="700"
               height="700"
               className="w-[180px] absolute"
-            />
+            /> */}{" "}
+            <div>
+              <motion.img
+                src="/images/m&m.png"
+                initial={{
+                  opacity: 0,
+                  x: 700,
+                }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                }}
+                whileInView={true}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 20,
+                }}
+              />
+            </div>
             <p className="heroRightText text-8xl rotate-90 absolute left-[45%]">
               Peanut
             </p>

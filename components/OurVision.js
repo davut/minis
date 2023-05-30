@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import AnimatedImg from "./AnimatedImg";
+import { AnimatedText } from "./AnimatedText";
 
 const OurVision = () => {
   return (
@@ -17,11 +18,14 @@ const OurVision = () => {
           <AnimatedImg
             path="/images/GroupEyes.svg"
             alt="eye logo"
-            className=" w-10"
+            className=" w-8"
             direction="-100"
           />
-          <h1 className=" font-inter font-bold text-3xl md:text-5xl leading-10 tracking-tighter text-[#3A8DDE] flex-none order-0 mb-5 text-center md:text-start">
-            Vision
+          <h1
+            className=" font-inter font-bold text-3xl md:text-5xl leading-10 tracking-tighter text-[#3A8DDE] flex-none order-0 mb-5 text-center md:text-start #863A20
+"
+          >
+            <AnimatedText text="Vision" direction="left" />
           </h1>
         </div>
         <div className="md:w-1/2 mt-4 md:mt-0 md:ml-8"></div>
