@@ -37,7 +37,7 @@ const OurMission = () => {
           <AnimatedImg
             path="/images/missionSvg.svg"
             alt="eye logo"
-            className=" w-10 mb-3"
+            className=" w-12 mb-3"
             style={{ width: "16px" }}
             direction="-100%"
           />

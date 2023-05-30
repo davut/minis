@@ -3,5 +3,10 @@
   "navbar.products": "Harytlar",
   "navbar.gallery": "Galeriýa",
   "navbar.contact": "Habarlaşmak",
-  "home.h1": "Badam"
+  "home.h1": "Badam",
+
+
+  "ourProductA":"Badamly şeker",
+  "ourProductB": "Çilinti şeker",
+  "ourProductC": "Kakaoly şeker"
 }

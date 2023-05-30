@@ -3,6 +3,9 @@
   "navbar.products": "Продукты",
   "navbar.gallery": "Галерея",
   "navbar.contact": "Свяжитесь с нами",
-   "home.h1" : "Arakhis"
+   "home.h1" : "Arakhis",
 
+   "ourProductA":"Арахисовая конфета",
+    "ourProductB": "Хрустящая конфета",
+    "ourProductC": "Шоколадная конфета"
 }

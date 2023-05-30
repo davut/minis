@@ -3,5 +3,11 @@
   "navbar.products": "Products",
   "navbar.gallery": "Gallery",
   "navbar.contact": "Contact us",
-  "home.h1" : "Peanut"
+  "home.h1" : "Peanut",
+
+
+
+  "ourProductA": "Peanut dragee",
+  "ourProductB": "Crispy dragee",
+  "ourProductC": "Chocolate dragee"
 }

@@ -18,7 +18,7 @@ const OurVision = () => {
           <AnimatedImg
             path="/images/GroupEyes.svg"
             alt="eye logo"
-            className=" w-10"
+            className=" w-8"
             direction="-100"
           />
           <h1

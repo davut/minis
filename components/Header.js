@@ -55,7 +55,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="w-full py-1  dark:text-light border-b-[1px] border-transparent">
+      <div className="w-full py-1  border-b-[1px] border-transparent fixed z-50 top-0 left-0 right-0 shadow bg-white">
         <div className="cont font-medium flex items-center justify-between py-4 relative">
           <div>
             <Image
