@@ -19,10 +19,16 @@ const OurMission = () => {
             />
           </div> */}
           <div className="relative mx-auto max-w-7xl">
-            <div className="bg-yellow-500 h-[70vh] rounded-lg">
-              <img
+            <div className="bg-yellow-500 h-[70vh] rounded-lg relative">
+              {/* <img
                 src="/images/RectangleMission 36.svg"
                 className="absolute bottom-[2%] left-[2%] w-full h-full object-cover"
+              /> */}
+              <AnimatedImg
+                path="/images/RectangleMission 36.svg"
+                alt={"chocolate"}
+                className="absolute bottom-[2%] left-[2%] w-full h-full object-cover"
+                direction="100"
               />
             </div>
           </div>
@@ -31,7 +37,8 @@ const OurMission = () => {
           <AnimatedImg
             path="/images/missionSvg.svg"
             alt="eye logo"
-            className=" w-16 mb-3"
+            className=" w-9 mb-3"
+            style={{ width: "16px" }}
             direction="-100"
           />
 

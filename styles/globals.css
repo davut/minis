@@ -23,3 +23,15 @@
   @apply font-extrabold  text-white;
 }
 /* font-sf-pro-display */
+html::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #f8adc7;
+  border-radius: 5rem;
+}

@@ -18,7 +18,7 @@ const OurVision = () => {
           <AnimatedImg
             path="/images/GroupEyes.svg"
             alt="eye logo"
-            className=" w-10"
+            className=" w-8"
             direction="-100"
           />
           <h1
@@ -40,13 +40,21 @@ const OurVision = () => {
           </p>
         </div>
         <div className="md:w-1/2 mt-4 md:mt-0 md:ml-8 ">
-          <div className="mx-auto max-w-7xl relative">
+          {/* <div className="mx-auto max-w-7xl relative">
             <div className="w-[300px] md:w-[350px] h-[350px] bg-[#FBCB00] rounded-full ">
               <AnimatedImg
                 path="/images/EllipseVisionImg.svg"
                 alt="chocolate"
                 direction="100"
                 className="absolute bottom-[2%] left-[2%] w-full h-full object-cover"
+              />
+            </div>
+          </div> */}
+          <div className="relative mx-auto max-w-7xl">
+            <div className="bg-yellow-500 h-[250px] w-[250px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[400px]  rounded-full">
+              <img
+                src="/images/EllipseVisionImg.svg"
+                className=" ml-5 w-full h-full object-cover"
               />
             </div>
           </div>
