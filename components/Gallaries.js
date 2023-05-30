@@ -16,13 +16,10 @@ const Gallaries = () => {
             viverra.
           </p>
         </div>
-        <div className="col-span-12  md:col-span-8 md:ml-10">
-          <div className="relative mx-auto max-w-7xl mt-10 md:mt-0">
-            <div className="bg-[#FBCE00] h-[250px] w-[250px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[350px]  relative">
-              {/* <img
-                src="/images/RectangleMission 36.svg"
-                className="absolute bottom-[2%] left-[2%] w-full h-full object-cover"
-              /> */}
+        {/* right images */}
+        <div className="col-span-12  md:col-span-8 md:ml-10 flex flex-wrap">
+          <div className="relative mx-auto max-w-7xl">
+            <div className="bg-[#FBCE00] h-[250px] w-[200px] md:h-[350px] md:w-[250px] lg:h-[400px] lg:w-[300px]  relative">
               <AnimatedImg
                 path="/images/RectangleMission 36.svg"
                 alt={"chocolate"}
@@ -30,6 +27,14 @@ const Gallaries = () => {
                 direction="100"
               />
             </div>
+          </div>
+          <div className="relative mx-auto max-w-7xl">
+            <AnimatedImg
+              path="/images/RectangleMission 36.svg"
+              alt={"chocolate"}
+              className="bg-[#FBCE00] h-[250px] w-[200px] md:h-[350px] md:w-[250px] lg:h-[400px] lg:w-[300px] object-cover"
+              direction="100"
+            />
           </div>
         </div>
       </div>
