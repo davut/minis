@@ -19,7 +19,7 @@ const OurMission = () => {
             />
           </div> */}
           <div className="relative mx-auto max-w-7xl">
-            <div className="bg-yellow-500 h-[70vh] rounded-lg relative">
+            <div className="bg-yellow-500 h-[250px] w-[250px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[400px] rounded-lg relative">
               {/* <img
                 src="/images/RectangleMission 36.svg"
                 className="absolute bottom-[2%] left-[2%] w-full h-full object-cover"
