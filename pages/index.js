@@ -6,6 +6,7 @@ import HomePage from "@/components/HomePage";
 import OurStory from "@/components/OurStory";
 import OurVision from "@/components/OurVision";
 import OurMission from "@/components/OurMission";
+import OurProduct from "@/components/OurProduct";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ function Home() {
       <OurStory />
       <OurVision />
       <OurMission />
+      <OurProduct />
     </main>
   );
 }

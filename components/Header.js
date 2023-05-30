@@ -59,11 +59,11 @@ const Header = () => {
         <div className="cont font-medium flex items-center justify-between py-4 relative">
           <div>
             <Image
-              src="/images/Vector.svg"
+              src="/images/logo.svg"
               width={300}
               height={300}
               alt="logo"
-              className="w-20 bg-black"
+              className="w-20"
             />
           </div>
           {/* toggle */}
