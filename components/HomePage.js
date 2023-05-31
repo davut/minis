@@ -3,12 +3,26 @@ import Image from "next/image";
 import React from "react";
 import { Font } from "next/font/google";
 import { motion } from "framer-motion";
-import AnimatedImg from "./AnimatedImg";
 
 // const font = Font.load("SF Pro Display");
 
-const Nut = ({ src, className }) => {
-  const quote = {
+const quote = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
+const Nut = ({ src, className, index }) => {
+  const delay = index * 0.2; // Adjust the delay value as needed
+  const animationVariants = {
     initial: {
       opacity: 0,
       y: 50,
@@ -18,35 +32,25 @@ const Nut = ({ src, className }) => {
       y: 0,
       transition: {
         duration: 1,
+        delay: delay,
       },
     },
   };
 
   return (
-    <motion.div
-      variants={quote}
-      initial="initial" // Set initial state to "initial"
-      animate="animate"
-    >
-      <Image width={"700"} height={"700"} src={src} className={className} />
+    <motion.div>
+      <div className={className}>
+        {/* <Image width={120} height={185} src={} /> */}
+        <motion.img
+          src={src}
+          alt=""
+          variants={animationVariants}
+          initial="initial"
+          animate="animate"
+        />
+      </div>
     </motion.div>
   );
-
-  // return (
-  // <div
-  //   width={"700"}
-  //   height={"700"}
-  //   className={`${className} bg-[url(/images/pngwing 3-1.svg)]`}
-  // style={{
-  //   backgroundImage: `url(${src})`,
-  //   backgroundSize: "cover",
-  //   backgroundPosition: "fixed",
-  //   width: "100%",
-  // }}
-  // >
-  //   rrrrr
-  // </div>
-  // );
 };
 
 const HomePage = () => {
@@ -57,61 +61,76 @@ const HomePage = () => {
   const { t } = useTranslation("common");
 
   return (
-    <>
+    <div className="overflow-hidden">
       <div className="heroPage w-full h-full overflow-hidden relative  mt-20">
         <div className="cont mt-5 flex items-center justify-center flex-wrap h-full relative">
           {/* left hero */}
           <div className="w-full md:w-[50%] relative">
             {" "}
-            <h1 className="text-sf-pro-display font-medium text-40 text-56 leading-140 text-white">
+            <motion.h1
+              className="text-sf-pro-display font-medium text-40 text-56 leading-140 text-white"
+              variants={quote}
+              initial="initial"
+              animate="animate"
+            >
               <span className="text-sf-pro-display font-extrabold  text-[80px] leading-85 text-[#863A20]">
                 {t("home.h1")}
               </span>
               has it
-              <p className="w-full md:w-[70%]">
+              <p className="w-full md:w-[90%] text-2xl">
                 Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed
                 tristique elementum tincidunt viverra.
               </p>
-            </h1>
+            </motion.h1>
           </div>
           {/* right hero */}
-          <div className=" w-full md:w-[50%] h-[500px] FlexCenter relative mt-20">
+          <div className="w-full md:w-[50%] h-[500px] FlexCenter relative mt-20">
             <Nut
               src={"/images/pngwing 3-1.svg"}
               className={
                 "absolute w-[120px] h-[185px] top-0 left-0 rounded-l-[16px] rotate-[106px]"
               }
+              index={0}
             />
             <Nut
               src={"/images/pngwing 4.svg"}
               className={
-                "absolute w-[120px] h-[185px] -top-[35%] left-0 rounded-l-[16px] rotate-[106px]"
+                "absolute w-[120px] h-[185px] -top-[24%] -left-20 rounded-l-[16px] rotate-[106px]"
               }
+              index={1}
             />
             <Nut
               src={"/images/pngwing 10.svg"}
               className={
-                "absolute w-20 h-20 -top-[30%] left-30 rounded-r-[37px] rotate-[106px]"
+                "absolute w-20 h-20 -top-[24%] left-30 rounded-r-[37px] rotate-[106px]"
               }
+              index={2}
             />
             <Nut
               src={"/images/pngwing 8.svg"}
               className={
                 "absolute w-[163px] h-[185px] bottom-10 left-0 rounded-r-[34px] rotate-[75px]"
               }
+              index={3}
             />
             <Nut
               src={"/images/pngwing 2.svg"}
               className={
                 "absolute w-[104px] h-[123px] -top-10 left-24 rounded-r-[34px] rotate-[75px] blur-[05]"
               }
+              index={4}
             />
-            <p className="heroRightText mb-10 absolute ml-12 -top-5 text-7xl">
+            <motion.p
+              className="heroRightText mb-10 absolute ml-12 -top-5 text-7xl"
+              variants={quote}
+              initial="initial"
+              animate="animate"
+            >
               Dragee
-            </p>
-            <p className="heroRightText -rotate-90 absolute -left-20 xl:left-5 text-9xl">
+            </motion.p>
+            <motion.p className="heroRightText -rotate-90 absolute -left-20 xl:left-5 text-9xl">
               Mini
-            </p>
+            </motion.p>
             {/* <Image
               src="/images/m&m.png"
               width="700"
@@ -121,6 +140,7 @@ const HomePage = () => {
             <div>
               <motion.img
                 src="/images/m&m.png"
+                alt="m&m"
                 initial={{
                   opacity: 0,
                   x: 700,
@@ -135,30 +155,33 @@ const HomePage = () => {
                   stiffness: 260,
                   damping: 20,
                 }}
+                className="w-[220px]"
               />
             </div>
-            <p className="heroRightText text-8xl rotate-90 absolute left-[45%]">
+            <motion.p className="heroRightText text-8xl rotate-90 absolute left-[45%]">
               Peanut
-            </p>
+            </motion.p>
           </div>
         </div>
         <Nut
           src={"/images/pngwing 1.svg"}
           className={
-            "absolute w-[174px] h-[199px] top-10 -right-2 rounded-r-[34px] rotate-[75px] blur-[05]"
+            "absolute w-[174px] h-[199px] top-10 -right-10 rounded-r-[34px] rotate-[75px] blur-[05]"
           }
+          index={1}
         />
         <Nut
           src={"/images/pngwing 7.svg"}
           className={
             "absolute w-[113px] h-[133px] bottom-20 -right-2 rounded-r-[34px] rotate--25"
           }
+          index={0}
         />
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        className=" md:-mt-20 "
+        className="md md:-mt-16 "
       >
         <path
           fill="#facb00"
@@ -169,10 +192,11 @@ const HomePage = () => {
       <Nut
         src={"/images/pngwing 3-1.svg"}
         className={
-          "absolute w-[200px] h-[123px] -bottom-10 right-[200px]  rotate-[75px]"
+          "absolute w-[200px] h-[123px] -bottom-0 right-[200px]  rotate-[75px]"
         }
+        index={1}
       />
-    </>
+    </div>
   );
 };
 

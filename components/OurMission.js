@@ -3,7 +3,7 @@ import React from "react";
 import AnimatedImg from "./AnimatedImg";
 import { AnimatedText } from "./AnimatedText";
 import { useTranslation } from "next-i18next";
-
+import { motion } from "framer-motion";
 const OurMission = () => {
   const { t } = useTranslation("common");
 
@@ -22,7 +22,12 @@ const OurMission = () => {
             />
           </div> */}
           <div className="relative mx-auto max-w-7xl">
-            <div className="bg-yellow-500 h-[250px] w-[250px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[400px] rounded-lg relative">
+            <motion.div
+              className="bg-yellow-500 h-[250px] w-[250px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[400px] rounded-lg relative"
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.3, staggerChildren: 0.08 }}
+            >
               {/* <img
                 src="/images/RectangleMission 36.svg"
                 className="absolute bottom-[2%] left-[2%] w-full h-full object-cover"
@@ -33,7 +38,7 @@ const OurMission = () => {
                 className="absolute bottom-[2%] left-[2%] w-full h-full object-cover"
                 direction="100"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="md:w-1/2 mt-4 md:mt-0 md:ml-8">

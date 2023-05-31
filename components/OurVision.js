@@ -3,6 +3,7 @@ import React from "react";
 import AnimatedImg from "./AnimatedImg";
 import { AnimatedText } from "./AnimatedText";
 import { useTranslation } from "next-i18next";
+import { motion } from "framer-motion";
 
 const OurVision = () => {
   const { t } = useTranslation("common");
@@ -56,12 +57,19 @@ const OurVision = () => {
             </div>
           </div> */}
           <div className="relative mx-auto max-w-7xl">
-            <div className="bg-yellow-500 h-[250px] w-[250px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[400px]  rounded-full">
-              <img
+            <motion.div
+              initial={{ x: "100%", rotate: -180, opacity: 0 }}
+              animate={{ x: 0, rotate: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="bg-yellow-500 h-[250px] w-[250px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[400px] rounded-full"
+            >
+              <Image
                 src="/images/EllipseVisionImg.svg"
-                className=" ml-5 w-full h-full object-cover"
+                className="ml-5 w-full h-full object-cover"
+                width={500}
+                height={500}
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
