@@ -8,6 +8,7 @@ import OurVision from "@/components/OurVision";
 import OurMission from "@/components/OurMission";
 import OurProduct from "@/components/OurProduct";
 import Gallaries from "@/components/Gallaries";
+import ContactUs from "@/components/ContactUs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ function Home() {
       <OurMission />
       <OurProduct />
       <Gallaries />
+      <ContactUs />
     </main>
   );
 }

@@ -6,8 +6,9 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { CancelIcon } from "./Icon";
 import { useTranslation } from "next-i18next";
+import { Logo } from "./Logo";
 
-const CustomLink = ({ href, title, className = "" }) => {
+export const CustomLink = ({ href, title, className = "" }) => {
   const { asPath } = useRouter();
 
   //   console.log(pathname);
@@ -58,13 +59,7 @@ const Header = () => {
       <div className="w-full py-1  border-b-[1px] border-transparent fixed z-50 top-0 left-0 right-0 shadow bg-white">
         <div className="cont font-medium flex items-center justify-between py-4 relative">
           <div>
-            <Image
-              src="/images/logo.svg"
-              width={300}
-              height={300}
-              alt="logo"
-              className="w-20"
-            />
+            <Logo />
           </div>
           {/* toggle */}
           <button
