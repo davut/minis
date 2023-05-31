@@ -34,13 +34,15 @@ const OurMission = () => {
           </div>
         </div>
         <div className="md:w-1/2 mt-4 md:mt-0 md:ml-8">
-          <AnimatedImg
-            path="/images/missionSvg.svg"
-            alt="eye logo"
-            className=" w-12 mb-3"
-            style={{ width: "16px" }}
-            direction="-100%"
-          />
+          <div style={{ width: "50px" }}>
+            <AnimatedImg
+              path="/images/missionSvg.svg"
+              alt="eye logo"
+              className=" w-12 mb-3"
+              style={{ width: "16px" }}
+              direction="-100%"
+            />
+          </div>
 
           <h1
             className=" font-inter font-extrabold text-3xl md:text-5xl leading-10 tracking-tighter text-[#FBCB00] flex-none order-0 mb-5 text-center md:text-start #863A20

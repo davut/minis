@@ -15,12 +15,14 @@ const OurVision = () => {
             src="/images/GroupEyes.svg"
             className="w-20"
           /> */}
-          <AnimatedImg
-            path="/images/GroupEyes.svg"
-            alt="eye logo"
-            className=" w-8"
-            direction="-100"
-          />
+          <div style={{ width: "50px" }}>
+            <AnimatedImg
+              path="/images/GroupEyes.svg"
+              alt="eye logo"
+              className=" w-10"
+              direction="-100"
+            />
+          </div>
           <h1
             className=" font-inter font-extrabold text-3xl md:text-5xl leading-10 tracking-tighter text-[#863A20] flex-none order-0 mb-5 text-center md:text-start #863A20
 "
