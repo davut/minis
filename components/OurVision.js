@@ -2,8 +2,11 @@ import Image from "next/image";
 import React from "react";
 import AnimatedImg from "./AnimatedImg";
 import { AnimatedText } from "./AnimatedText";
+import { useTranslation } from "next-i18next";
 
 const OurVision = () => {
+  const { t } = useTranslation("common");
+
   return (
     <div className="py-10">
       <div className="flex flex-col md:flex-row items-start justify-between contLg">
@@ -27,7 +30,7 @@ const OurVision = () => {
             className=" font-inter font-extrabold text-3xl md:text-5xl leading-10 tracking-tighter text-[#863A20] flex-none order-0 mb-5 text-center md:text-start #863A20
 "
           >
-            <AnimatedText text="Vision" direction="left" />
+            <AnimatedText text={t("visionH1")} direction="left" />
           </h1>
           <p className="text-gray-600 leading-9 text-xl">
             Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed

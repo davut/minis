@@ -1,14 +1,17 @@
 import React from "react";
 import AnimatedImg from "./AnimatedImg";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 const Gallaries = () => {
+  const { t } = useTranslation("common");
+
   return (
     <div>
       <div className="cont grid grid-cols-12">
         <div className="col-span-12 md:col-span-4 ">
           <h1 className="font-inter font-black text-6xl leading-47 text-left text-top tracking-wide text-[#3A8DDE] mb-4">
-            Gallery
+            {t("galleryH1")}
           </h1>
           <p className=" leading-9 text-xl text-[#3A8DDE]">
             Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed
