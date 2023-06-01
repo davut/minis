@@ -68,7 +68,7 @@ const HomePage = () => {
           <div className="w-full md:w-[50%] relative">
             {" "}
             <motion.h1
-              className="text-sf-pro-display font-medium text-40 text-56 leading-140 text-white"
+              className="text-sf-pro-display font-medium text-2xl md:text-[40px] lg:text-[56px] leading-140 text-white"
               variants={quote}
               initial="initial"
               animate="animate"
