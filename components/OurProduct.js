@@ -37,7 +37,7 @@ const OurProduct = () => {
               className={`py-10 px-7 rounded-lg ${elem.color} relative lg:flex-1 flex flex-col justify-center items-center mt-20 w-96 my-20`}
             >
               {/* <div className="flex justify-between">*/}
-              <div className="absolute left-10 top-20 rounded-2xl">
+              <div className="absolute left-0 md:left-2 lg:left-10 top-20 rounded-2xl">
                 {" "}
                 <ChevronLeft
                   className={"text-3xl text-white font-bold  cursor-pointer "}
@@ -49,7 +49,7 @@ const OurProduct = () => {
                 src={elem.img}
                 className=" w-36 -mt-[50%]"
               />
-              <div className="absolute right-10 top-20">
+              <div className="absolute right-0 md:right-2 lg:right-10 top-20">
                 <ChevronRight
                   className={"text-3xl text-white font-bold  cursor-pointer"}
                 />
