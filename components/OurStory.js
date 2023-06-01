@@ -14,6 +14,7 @@ const OurStory = () => {
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             transition={{ delay: 0.3, staggerChildren: 0.08 }}
+            whileInView={{ once: true }}
           >
             <AnimatedImg
               path="/images/RectangleSnacks 34.svg"

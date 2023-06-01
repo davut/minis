@@ -9,7 +9,7 @@ const OurVision = () => {
   const { t } = useTranslation("common");
 
   return (
-    <div className="py-10">
+    <div className="py-10 overflow-hidden">
       <div className="flex flex-col md:flex-row items-start justify-between contLg">
         {/* left */}
         <div className="w-full md:w-1/2 relative">
@@ -59,8 +59,9 @@ const OurVision = () => {
           <div className="relative mx-auto max-w-7xl">
             <motion.div
               initial={{ x: "100%", rotate: -180, opacity: 0 }}
-              animate={{ x: 0, rotate: 0, opacity: 1 }}
+              whileInView={{ x: 0, rotate: 0, opacity: 1 }}
               transition={{ duration: 1 }}
+              // whileInView={{ once: true }}
               className="bg-yellow-500 h-[250px] w-[250px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[400px] rounded-full"
             >
               <Image
