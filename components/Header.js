@@ -54,6 +54,65 @@ const Header = () => {
     push(pathname, asPath, { locale });
   };
 
+  const PopUpLanguage = ({ className }) => (
+    <div className="flex  items-center">
+      <div
+        className="flex items-center relative cursor-pointer"
+        onClick={togglePopup}
+      >
+        <p
+          className={`leading-24 text-gray-600 font-bold text-[16px] mr-2 uppercase ${className}`}
+        >
+          {locale}
+        </p>
+        <div className="w-5">
+          {isPopupOpen ? (
+            <CancelIcon
+              className={"absolute right-0 top-0 text-lg" + className}
+            />
+          ) : (
+            <motion.img
+              src="/images/VectorLanguage.svg"
+              width="700"
+              height="700"
+              className="w-5 cursor-pointer"
+              whileHover={{ scale: 1.1 }}
+            />
+          )}
+        </div>
+        {isPopupOpen && (
+          <motion.div
+            className="absolute top-0 right-0 mt-8 mr-2 bg-white rounded-lg p-4 z-50 shadow"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5 }}
+          >
+            <ul className="space-y-2 ">
+              <li
+                className="text-gray-800 cursor-pointer"
+                onClick={() => handleChangeLanguage("en")}
+              >
+                English
+              </li>
+              <li
+                className="text-gray-800 cursor-pointer"
+                onClick={() => handleChangeLanguage("ru")}
+              >
+                Russian
+              </li>
+              <li
+                className="text-gray-800 cursor-pointer"
+                onClick={() => handleChangeLanguage("tu")}
+              >
+                Turkmen
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </div>
+    </div>
+  );
+
   return (
     <>
       <div className="w-full py-1  border-b-[1px] border-transparent fixed z-50 top-0 left-0 right-0 shadow bg-white">
@@ -104,58 +163,8 @@ const Header = () => {
                 className="mx-2"
               />
             </nav>
-            <div className="flex  items-center">
-              <div
-                className="flex items-center relative cursor-pointer"
-                onClick={togglePopup}
-              >
-                <p className="leading-24 text-gray-600 font-bold text-[16px] mr-2 uppercase">
-                  {locale}
-                </p>
-                <div className="w-5">
-                  {isPopupOpen ? (
-                    <CancelIcon className={"absolute right-0 top-0 text-lg"} />
-                  ) : (
-                    <motion.img
-                      src="/images/VectorLanguage.svg"
-                      width="700"
-                      height="700"
-                      className="w-5 cursor-pointer"
-                      whileHover={{ scale: 1.1 }}
-                    />
-                  )}
-                </div>
-                {isPopupOpen && (
-                  <motion.div
-                    className="absolute top-0 right-0 mt-8 mr-2 bg-white rounded-lg p-4 z-50 shadow"
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.5 }}
-                  >
-                    <ul className="space-y-2 ">
-                      <li
-                        className="text-gray-800 cursor-pointer"
-                        onClick={() => handleChangeLanguage("en")}
-                      >
-                        English
-                      </li>
-                      <li
-                        className="text-gray-800 cursor-pointer"
-                        onClick={() => handleChangeLanguage("ru")}
-                      >
-                        Russian
-                      </li>
-                      <li
-                        className="text-gray-800 cursor-pointer"
-                        onClick={() => handleChangeLanguage("tu")}
-                      >
-                        Turkmen
-                      </li>
-                    </ul>
-                  </motion.div>
-                )}
-              </div>
-            </div>
+            {/* popup large */}
+            <PopUpLanguage />
           </div>
 
           {/* Mobile nav */}
@@ -192,6 +201,7 @@ const Header = () => {
                   className="m-2 text-white"
                 />
               </nav>
+              <PopUpLanguage className="text-white" />
             </motion.div>
           ) : null}
         </div>
