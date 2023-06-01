@@ -115,7 +115,9 @@ const Header = () => {
 
   return (
     <>
-      <div className="w-full py-1  border-b-[1px] border-transparent fixed z-50 top-0 left-0 right-0 shadow bg-white">
+      {/* for pushing the pages under down a little bit, cause navbar have fixed and it standing on it */}
+      <div className="h-[90px] bg-light"></div>
+      <div className="w-full py-1  border-b-[1px] border-transparent fixed z-50 top-0 left-0 right-0 shadow glassBg">
         <div className="cont font-medium flex items-center justify-between py-4 relative">
           <div>
             <Logo />
@@ -166,47 +168,47 @@ const Header = () => {
             {/* popup large */}
             <PopUpLanguage />
           </div>
-
-          {/* Mobile nav */}
-          {isOpen ? (
-            <motion.div
-              initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
-              animate={{ scale: 1, opacity: 1 }}
-              className={`min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2
-           bg-dark/90 backdrop-blur-md py-32 lg:hidden `}
-            >
-              <nav
-                className="flex flex-col justify-center items-center text-light/75"
-                onClick={() => setisOpen(false)}
-              >
-                <CustomLink
-                  href="about"
-                  title="About us
-"
-                  className="m-2 text-white font-bold text-[15px] leading-24 text-yellow-500"
-                />
-                <CustomLink
-                  href="/products"
-                  title="Products"
-                  className="m-2 text-white"
-                />
-                <CustomLink
-                  href="/gallery"
-                  title="Gallery"
-                  className="m-2 text-white"
-                />
-                <CustomLink
-                  href="/contact"
-                  title="Contact us"
-                  className="m-2 text-white"
-                />
-              </nav>
-              <PopUpLanguage className="text-white" />
-            </motion.div>
-          ) : null}
         </div>
-
         {/* <ShowIcon /> */}
+      </div>
+      {/* Mobile nav */}
+      <div className="absolute top-[100%]">
+        {isOpen ? (
+          <motion.div
+            initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+            animate={{ scale: 1, opacity: 1 }}
+            className={`min-w-[70vw] flex flex-col justify-between items-center fixed top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2
+           bg-dark/90 backdrop-blur-md py-32 lg:hidden `}
+          >
+            <nav
+              className="flex flex-col justify-center items-center text-light/75"
+              onClick={() => setisOpen(false)}
+            >
+              <CustomLink
+                href="about"
+                title="About us
+"
+                className="m-2 text-white font-bold text-[15px] leading-24 text-yellow-500"
+              />
+              <CustomLink
+                href="/products"
+                title="Products"
+                className="m-2 text-white"
+              />
+              <CustomLink
+                href="/gallery"
+                title="Gallery"
+                className="m-2 text-white"
+              />
+              <CustomLink
+                href="/contact"
+                title="Contact us"
+                className="m-2 text-white"
+              />
+            </nav>
+            <PopUpLanguage className="text-white" />
+          </motion.div>
+        ) : null}
       </div>
     </>
   );
