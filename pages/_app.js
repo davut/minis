@@ -2,6 +2,7 @@ import { appWithTranslation } from "next-i18next";
 import Layout from "../components/Layout";
 import "@/styles/globals.css";
 
+// Publish
 function App({ Component, pageProps }) {
   // const router = useRouter();
   // const [locale, setLocale] = useState(router.locale);
