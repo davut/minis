@@ -6,7 +6,7 @@ module.exports = {
     defaultLocale: "en",
     locales: ["en", "ru", "tu"],
   },
-  localePath: "public/locales", // Path to your translation files
+  localePath: path.resolve("public/locales"),
   // localeSubpaths: {
   //   en: "en",
   //   ru: "ru",
