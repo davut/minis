@@ -75,7 +75,7 @@ const Gallaries = () => {
                   />
                 </div>
               </div>
-              <div className="absolute top-0 lefft w-20 h-40-0 right-0 bottom-0 bg-white bg-opacity-80 rodunded-full p-2"></div>
+              <div className="absolute top-0 right-0 w-20 h-full bg-white bg-opacity-50 blur-sm"></div>
             </div>
           </div>
           {/* end */}

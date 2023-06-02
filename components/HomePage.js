@@ -62,13 +62,13 @@ const HomePage = () => {
 
   return (
     <div className="overflow-hidden ">
-      <div className="heroPage w-full h-full overflow-hidden relative  ">
+      <div className="heroPage w-full h-full overflow-hidden relative pt-20">
         <div className="cont mt-5 flex items-center justify-center flex-wrap h-full relative">
           {/* left hero */}
           <div className="w-full md:w-[50%] relative">
             {" "}
             <motion.h1
-              className="text-sf-pro-display font-medium text-2xl md:text-[40px] lg:text-[56px] leading-140 text-white"
+              className="text-sf-pro-display font-medium text-2xl md:text-[40px] lg:text-[56px] leading-140 text-white leading-normal  "
               variants={quote}
               initial="initial"
               animate="animate"
@@ -76,15 +76,15 @@ const HomePage = () => {
               <span className="text-sf-pro-display font-extrabold  text-[80px] leading-85 text-[#863A20]">
                 {t("home.h1")}
               </span>
-              has it
-              <p className="w-full md:w-[90%] text-2xl">
+              <span className=" inline-block">has it</span>
+              <p className="w-full md:w-[90%] text-2xl leading-normal">
                 Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed
                 tristique elementum tincidunt viverra.
               </p>
             </motion.h1>
           </div>
           {/* right hero */}
-          <div className="w-full md:w-[50%] h-[500px] FlexCenter relative mt-20">
+          <div className="w-full md:w-[50%] h-[500px] FlexCenter relative mt-28">
             <Nut
               src={"/images/pngwing 3-1.svg"}
               className={
@@ -121,23 +121,17 @@ const HomePage = () => {
               index={4}
             />
             <motion.p
-              className="heroRightText mb-10 absolute ml-12 -top-5 text-7xl"
+              className="heroRightText mb-10 absolute ml-12 -top-16 text-7xl"
               variants={quote}
               initial="initial"
               animate="animate"
             >
               Dragee
             </motion.p>
-            <motion.p className="heroRightText -rotate-90 absolute -left-20 xl:left-5 text-5xl md:text-9xl">
+            <motion.p className="heroRightText -rotate-90 absolute -left-36 sm:-left-28 md:-left-24 lg:-left-20 xl:-left-0 text-9xl">
               Mini
             </motion.p>
-            {/* <Image
-              src="/images/m&m.png"
-              width="700"
-              height="700"
-              className="w-[180px] absolute"
-            /> */}{" "}
-            <div>
+            <div className=" z-10">
               <motion.img
                 src="/images/m&m.png"
                 alt="m&m"
@@ -155,14 +149,15 @@ const HomePage = () => {
                   stiffness: 260,
                   damping: 20,
                 }}
-                className="w-[220px]"
+                className="w-[220px] z-10"
               />
             </div>
-            <motion.p className="heroRightText text-8xl rotate-90 absolute left-[45%]">
+            <motion.p className="heroRightText text-8xl rotate-90 absolute left-[48%]">
               Peanut
             </motion.p>
           </div>
         </div>
+        {/* </div> */}
         <Nut
           src={"/images/pngwing 1.svg"}
           className={

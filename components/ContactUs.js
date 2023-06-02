@@ -24,7 +24,7 @@ const ContactUs = () => {
           <div className="flex flex-wrap justify-between gap-3">
             {/* left */}
             <div className=" w-full md:w-[45%]">
-              <h1 className="font-inter font-black text-6xl leading-47 text-left text-top tracking-wide text-[#863A20] mb-4">
+              <h1 className="font-inter font-black text-5xl md:text-6xl leading-47 text-left text-top tracking-wide text-[#863A20] mb-4">
                 {t("contactUs")}
               </h1>
               <p className=" leading-9 text-xl text-[#863A20]">

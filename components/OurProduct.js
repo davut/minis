@@ -56,10 +56,10 @@ const OurProduct = () => {
                 />
               </div>
               {/* </div> */}
-              <h2 className="font-inter font-bold text-3xl leading-47 text-white my-5">
+              <h2 className="font-inter font-bold text-3xl leading-47 text-white my-5 text-center">
                 {elem.name}
               </h2>
-              <p className="text-white leading-9 text-lg text-center">
+              <p className="text-white leading-9 text-xm md:text-lg text-center">
                 {elem.desc}
               </p>
             </div>
