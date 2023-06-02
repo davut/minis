@@ -58,17 +58,21 @@ const OurVision = () => {
           </div> */}
           <div className="relative mx-auto max-w-7xl">
             <motion.div
-              initial={{ x: "100%", rotate: -180, opacity: 0 }}
-              whileInView={{ x: 0, rotate: 0, opacity: 1 }}
-              transition={{ duration: 1 }}
-              // whileInView={{ once: true }}
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.1 }}
               className="bg-yellow-500 h-[250px] w-[250px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[400px] rounded-full"
             >
-              <Image
-                src="/images/EllipseVisionImg.svg"
+              {/* <Image
+          src="/images/EllipseVisionImg.svg"
+          className="ml-5 w-full h-full object-cover"
+          width={500}
+          height={500}
+        /> */}
+              <AnimatedImg
+                path="/images/EllipseVisionImg.svg"
+                alt="vision img"
                 className="ml-5 w-full h-full object-cover"
-                width={500}
-                height={500}
               />
             </motion.div>
           </div>

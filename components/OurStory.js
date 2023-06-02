@@ -11,10 +11,9 @@ const OurStory = () => {
         <div className="w-full md:w-1/2 relative overflow-hidden">
           <motion.div
             className="w-full md:w-[80%] h-[200px] md:h-[400px] bg-yellow-400 relative border-s rounded-e-[50%]"
-            initial={{ x: "-100%" }}
-            animate={{ x: 0 }}
-            transition={{ delay: 0.3, staggerChildren: 0.08 }}
-            whileInView={{ once: true }}
+            initial={{ y: 70, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
           >
             <AnimatedImg
               path="/images/RectangleSnacks 34.svg"

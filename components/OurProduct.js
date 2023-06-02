@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "./Icon";
 import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
+import AnimatedImg from "./AnimatedImg";
 
 const OurProduct = () => {
   const { t } = useTranslation("common");
@@ -13,23 +14,26 @@ const OurProduct = () => {
       name: t("ourProductB"),
       desc: "Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed .",
       color: "bg-[#3A8DDE]",
+      delay: 0.1,
     },
     {
       img: "/images/chcolateImg.svg",
       name: t("ourProductC"),
       desc: "Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed .",
       color: "bg-[#5E2A2B]",
+      delay: 0.2,
     },
     {
       img: "/images/chocolateYello.svg",
       name: t("ourProductA"),
       desc: "Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed .",
       color: "bg-[#FACD00]",
+      delay: 0.3,
     },
   ];
   return (
     <>
-      <div className="bg-[#f4e9d5] py-36 overflow-hidden">
+      <div className="bg-[#f4e9d5] py-36 overfldow-hidden">
         {/* */}
 
         <div className="cont flex justify-center items-center gap-x-6 flex-wrap">
@@ -45,12 +49,20 @@ const OurProduct = () => {
                   className={"text-3xl text-white font-bold  cursor-pointer "}
                 />
               </div>
-              <Image
+              <motion.img
                 width={"300"}
                 height={"300"}
                 src={elem.img}
                 className=" w-36 -mt-[50%]"
+                initial={{ y: 70, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: elem.delay }}
               />
+              {/* <AnimatedImg
+                path={elem.img}
+                alt={elem.name}
+                className=" w-36 -mt-[50%]"
+              /> */}
               <div className="absolute right-0 md:right-2 lg:right-10 top-20">
                 <ChevronRight
                   className={"text-3xl text-white font-bold  cursor-pointer"}
@@ -69,11 +81,11 @@ const OurProduct = () => {
       </div>
       <motion.svg
         initial={{ x: "-100%" }}
-        whileInView={{ y: 0, x: 0 }}
-        transition={{
-          // y: { duration: 1, yoyo: Infinity },
-          x: { duration: 1, yoyo: Infinity },
-        }}
+        // whileInView={{ y: 0, x: 0 }}
+        // transition={{
+        //   // y: { duration: 1, yoyo: Infinity },
+        //   x: { duration: 1, yoyo: Infinity },
+        // }}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
         className=" -mt-9 md:-mt-12"

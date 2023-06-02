@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { ChevronLeft, ChevronRight } from "./Icon";
+import AnimatedImg from "./AnimatedImg";
 
 const Gallaries = () => {
   const { t } = useTranslation("common");
@@ -44,11 +45,18 @@ const Gallaries = () => {
             <div className="flex flex-nowrap lg:ml-40 md:ml-20 ">
               <div className="inline-block px-3">
                 <div className=" w-72 h-96 max-w-xs overflow-ehidden  shadow-md bg-[#FBCE00] hover:shadow-xl transition-shadow duration-300 ease-in-out relative">
-                  <Image
+                  {/* <Image
                     alt="women"
                     src="/images/womanView.svg"
                     width="500"
                     height="500"
+                    className=" w-72 h-96 object-cover  absolute bottom-10 left-4"
+                  /> */}
+                  <AnimatedImg
+                    alt="women"
+                    path="/images/womanView.svg"
+                    // width="500"
+                    // height="500"
                     className=" w-72 h-96 object-cover  absolute bottom-10 left-4"
                   />
                   <button className="absolute top-[50%] left-[50%] text-xl text-white z-20">
@@ -64,7 +72,16 @@ const Gallaries = () => {
                     width="500"
                     height="500"
                     className="w-full h-full object-cover"
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                   />
+                  {/* <AnimatedImg
+                    alt="icon"
+                    path="/images/RectangleMission 36.svg"
+                    // width="500"
+                    // height="500"
+                    className="w-full h-full object-cover"
+                  /> */}
                 </div>
               </div>
               <div className="inline-block px-3">
