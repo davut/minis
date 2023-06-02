@@ -173,7 +173,13 @@ const HomePage = () => {
           index={0}
         />
       </div>
-      <svg
+      <motion.svg
+        initial={{ x: "-100%" }}
+        whileInView={{ y: 0, x: 0 }}
+        transition={{
+          // y: { duration: 1, yoyo: Infinity },
+          x: { duration: 1, yoyo: Infinity },
+        }}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
         className="md md:-mt-16 "
@@ -183,7 +189,7 @@ const HomePage = () => {
           fillOpacity="1"
           d="M0,160L30,165.3C60,171,120,181,180,170.7C240,160,300,128,360,138.7C420,149,480,203,540,192C600,181,660,107,720,90.7C780,75,840,117,900,154.7C960,192,1020,224,1080,202.7C1140,181,1200,107,1260,96C1320,85,1380,139,1410,165.3L1440,192L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
         ></path>
-      </svg>
+      </motion.svg>
       <Nut
         src={"/images/pngwing 3-1.svg"}
         className={

@@ -1,7 +1,7 @@
 import React from "react";
-import AnimatedImg from "./AnimatedImg";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
+import { ChevronLeft, ChevronRight } from "./Icon";
 
 const Gallaries = () => {
   const { t } = useTranslation("common");
@@ -13,12 +13,28 @@ const Gallaries = () => {
           <h1 className="font-inter font-black text-6xl leading-47 text-left text-top tracking-wide text-[#3A8DDE] mb-4">
             {t("galleryH1")}
           </h1>
-          <p className=" leading-9 text-xl text-[#3A8DDE]">
+          <p className=" leading-9 text-xl text-[#3A8DDE] my-10">
             Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed
             tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet
             consectetur. Viverra at vel purus sed tristique elementum tincidunt
             viverra.
           </p>
+          <div className="flex gap-x-5 my-10">
+            <div className=" w-16 h-16 rounded-full cursor-pointer bg-[#fbce00] flex justify-center items-center">
+              <ChevronLeft
+                className={"text-lg text-white font-bold"}
+                width="10"
+                height="10"
+              />
+            </div>
+            <div className=" w-16 h-16 rounded-full cursor-pointer bg-[#fbce00] flex justify-center items-center">
+              <ChevronRight
+                className={"text-lg text-white font-bold"}
+                width="10"
+                height="10"
+              />
+            </div>
+          </div>
         </div>
         <div className=" col-span-12 md:col-span-8 relative">
           {/* right images */}
