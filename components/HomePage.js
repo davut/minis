@@ -61,8 +61,8 @@ const HomePage = () => {
   const { t } = useTranslation("common");
 
   return (
-    <div className="overflow-hidden">
-      <div className="heroPage w-full h-full overflow-hidden relative  mdt-20">
+    <div className="overflow-hidden ">
+      <div className="heroPage w-full h-full overflow-hidden relative  ">
         <div className="cont mt-5 flex items-center justify-center flex-wrap h-full relative">
           {/* left hero */}
           <div className="w-full md:w-[50%] relative">
@@ -128,7 +128,7 @@ const HomePage = () => {
             >
               Dragee
             </motion.p>
-            <motion.p className="heroRightText -rotate-90 absolute -left-20 xl:left-5 text-9xl">
+            <motion.p className="heroRightText -rotate-90 absolute -left-20 xl:left-5 text-5xl md:text-9xl">
               Mini
             </motion.p>
             {/* <Image

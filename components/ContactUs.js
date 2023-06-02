@@ -1,7 +1,10 @@
 import React from "react";
 import { Envelope, Facebook, Instagram } from "./Icon";
+import { useTranslation } from "next-i18next";
 
 const ContactUs = () => {
+  const { t } = useTranslation("common");
+
   return (
     <>
       <svg
@@ -22,7 +25,7 @@ const ContactUs = () => {
             {/* left */}
             <div className=" w-full md:w-[45%]">
               <h1 className="font-inter font-black text-6xl leading-47 text-left text-top tracking-wide text-[#863A20] mb-4">
-                Contact Us
+                {t("contactUs")}
               </h1>
               <p className=" leading-9 text-xl text-[#863A20]">
                 Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed

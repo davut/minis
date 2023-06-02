@@ -32,8 +32,9 @@ const OurProduct = () => {
         {/* */}
 
         <div className="cont flex justify-center items-center gap-x-6 flex-wrap">
-          {product.map((elem) => (
+          {product.map((elem, i) => (
             <div
+              key={i}
               className={`py-10 px-7 rounded-lg ${elem.color} relative lg:flex-1 flex flex-col justify-center items-center mt-20 w-96 my-20`}
             >
               {/* <div className="flex justify-between">*/}
@@ -68,7 +69,7 @@ const OurProduct = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        className=" -mt-16"
+        className=" -mt-9 md:-mt-12"
       >
         <path
           fill="#f4e9d5"

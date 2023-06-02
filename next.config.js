@@ -7,6 +7,9 @@ const nextConfig = {
   //   locales: ["en", "ru", "tm"],
   //   defaultLocale: "en",
   // },
+  devServerCacheConfig: {
+    enabled: false,
+  },
 };
 
 module.exports = nextConfig;

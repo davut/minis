@@ -29,6 +29,7 @@ const Gallaries = () => {
               <div className="inline-block px-3">
                 <div className=" w-72 h-96 max-w-xs overflow-ehidden  shadow-md bg-[#FBCE00] hover:shadow-xl transition-shadow duration-300 ease-in-out relative">
                   <Image
+                    alt="women"
                     src="/images/womanView.svg"
                     width="500"
                     height="500"
@@ -42,6 +43,7 @@ const Gallaries = () => {
               <div className="inline-block px-3">
                 <div className=" w-72 h-96 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <Image
+                    alt="icon"
                     src="/images/RectangleMission 36.svg"
                     width="500"
                     height="500"
@@ -53,6 +55,7 @@ const Gallaries = () => {
                 <div className=" w-72 h-96 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   {" "}
                   <Image
+                    alt="icon"
                     src="/images/RectangleMission 36.svg"
                     width="500"
                     height="500"
@@ -64,6 +67,7 @@ const Gallaries = () => {
                 <div className=" w-72 h-96 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   {" "}
                   <Image
+                    alt="icon"
                     src="/images/RectangleMission 36.svg"
                     width="500"
                     height="500"

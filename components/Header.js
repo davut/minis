@@ -124,12 +124,12 @@ const Header = () => {
           </div>
           {/* toggle */}
           <button
-            className="flex flex-col justify-center items-center lg:hidden fddixed z-50"
+            className="flex flex-col justify-center items-center lg:hidden z-50"
             onClick={handleClick}
           >
             <span
-              className={`bg-dark block transition-all duration-300 ease-in-out h-0.5 w-6 rounded-sm -translate-y-0.5 ${
-                isOpen ? "rotate-45 translate-y-1" : " -translate-y-0.5"
+              className={`bg-dark block transition-all duration-300 ease-in-out h-0.5 w-6 rounded-sm ${
+                isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
               }`}
             ></span>
             <span
@@ -138,9 +138,9 @@ const Header = () => {
               }`}
             ></span>
             <span
-              className={`bg-dark block transition-all duration-300 ease-in-out h-0.5 w-6 rounded-sm translate-y-0.5 ${
-                isOpen ? "-rotate-45 -translate-y-1" : " translate-y-0.5"
-              } `}
+              className={`bg-dark block transition-all duration-300 ease-in-out h-0.5 w-6 rounded-sm ${
+                isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+              }`}
             ></span>
           </button>
 
