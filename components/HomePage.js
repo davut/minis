@@ -85,6 +85,18 @@ const HomePage = () => {
           </div>
           {/* right hero */}
           <div className="w-full md:w-[50%] h-[500px] FlexCenter relative mt-28">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.7, type: "fade" }}
+            >
+              <Image
+                width="500"
+                height="500"
+                src="/images/heroLine.svg"
+                className="absolute -left-20 -top-14 w-56 z-20"
+              />
+            </motion.div>
             <Nut
               src={"/images/pngwing 3-1.svg"}
               className={
@@ -128,8 +140,9 @@ const HomePage = () => {
             >
               Dragee
             </motion.p>
+
             <motion.p
-              className="heroRightText -rotate-90 absolute -left-36 sm:-left-28 md:-left-24 lg:-left-20 xl:-left-0 text-9xl"
+              className="heroRightText -rotate-90 absolute -left-36 sm:-left-4 md:-left-40 lg:-left-20 xl:-left-12 text-9xl md:text-[160px] "
               initial={{ x: 100, opacity: 0, rotate: -90 }}
               whileInView={{ x: 0, opacity: 1, rotate: -90 }}
               // transition={{ duration: 1, delay: 0.1 }}
@@ -158,10 +171,10 @@ const HomePage = () => {
               />
             </div>
             <motion.p
-              className="heroRightText text-8xl rotate-90 absolute left-[48%]"
+              className="heroRightText text-8xl md:text-9xl rotate-90 absolute left-[48%] md:left-[40%]"
               initial={{ x: -100, opacity: 0, rotate: 90 }}
               whileInView={{ x: 0, opacity: 1, rotate: 90 }}
-              transition={{ delay: 0.3 }}
+              transition={{ delay: 0.6 }}
             >
               Peanut
             </motion.p>
