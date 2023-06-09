@@ -101,7 +101,7 @@ const HomePage = () => {
             <Nut
               src={"/images/pngwing 3-1.svg"}
               className={
-                "absolute w-[120px] h-[185px] top-0 -left-20 rounded-l-[16px] rotate-[106px]"
+                "absolute w-[120px] h-[185px] top-0 left-0 rounded-l-[16px] rotate-[106px]"
               }
               index={0}
             />
@@ -172,7 +172,7 @@ const HomePage = () => {
               />
             </div>
             <motion.p
-              className="heroRightText text-8xl md:text-9xl rotate-90 absolute left-[48%] md:left-[40%]"
+              className="heroRightText text-8xl md:text-9xl rotate-90 absolute left-[48%] md:left-[40%] z-10"
               initial={{ x: -100, opacity: 0, rotate: 90 }}
               whileInView={{ x: 0, opacity: 1, rotate: 90 }}
               transition={{ delay: 0.6 }}
