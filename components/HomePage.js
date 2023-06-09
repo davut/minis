@@ -128,31 +128,41 @@ const HomePage = () => {
             >
               Dragee
             </motion.p>
-            <motion.p className="heroRightText -rotate-90 absolute -left-36 sm:-left-28 md:-left-24 lg:-left-20 xl:-left-0 text-9xl">
+            <motion.p
+              className="heroRightText -rotate-90 absolute -left-36 sm:-left-28 md:-left-24 lg:-left-20 xl:-left-0 text-9xl"
+              initial={{ x: 100, opacity: 0, rotate: -90 }}
+              whileInView={{ x: 0, opacity: 1, rotate: -90 }}
+              // transition={{ duration: 1, delay: 0.1 }}
+            >
               Mini
             </motion.p>
             <div className=" z-10">
               <motion.img
                 src="/images/m&m.png"
                 alt="m&m"
-                initial={{
-                  opacity: 0,
-                  x: 700,
-                }}
-                animate={{
-                  opacity: 1,
-                  x: 0,
-                }}
-                whileInView={true}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                }}
+                // initial={{
+                //   opacity: 0,
+                //   x: 700,
+                // }}
+                // animate={{
+                //   opacity: 1,
+                //   x: 0,
+                // }}
+                // whileInView={true}
+                // transition={{
+                //   type: "spring",
+                //   stiffness: 260,
+                //   damping: 20,
+                // }}
                 className="w-[220px] z-10"
               />
             </div>
-            <motion.p className="heroRightText text-8xl rotate-90 absolute left-[48%]">
+            <motion.p
+              className="heroRightText text-8xl rotate-90 absolute left-[48%]"
+              initial={{ x: -100, opacity: 0, rotate: 90 }}
+              whileInView={{ x: 0, opacity: 1, rotate: 90 }}
+              transition={{ delay: 0.3 }}
+            >
               Peanut
             </motion.p>
           </div>
