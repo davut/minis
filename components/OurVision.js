@@ -60,7 +60,7 @@ const OurVision = () => {
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.1 }}
+              // transition={{ duration: 1, delay: 0.1 }}
               className="bg-yellow-500 h-[250px] w-[250px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[400px] rounded-full"
             >
               {/* <Image

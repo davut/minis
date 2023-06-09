@@ -84,23 +84,24 @@ const HomePage = () => {
             </motion.h1>
           </div>
           {/* right hero */}
-          <div className="w-full md:w-[50%] h-[500px] FlexCenter relative mt-28">
+          <div className="w-full md:w-[50%] h-[500px] FlexCenter relative mt-28 ">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.7, type: "fade" }}
+              className="hidden md:block"
             >
               <Image
                 width="500"
                 height="500"
                 src="/images/heroLine.svg"
-                className="absolute -left-20 -top-14 w-56 z-20"
+                className="absolute -left-36 lg:-left-20 md:-top-14 w-40 lg:w-56 z-20"
               />
             </motion.div>
             <Nut
               src={"/images/pngwing 3-1.svg"}
               className={
-                "absolute w-[120px] h-[185px] top-0 left-0 rounded-l-[16px] rotate-[106px]"
+                "absolute w-[120px] h-[185px] top-0 -left-20 rounded-l-[16px] rotate-[106px]"
               }
               index={0}
             />
