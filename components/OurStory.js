@@ -13,7 +13,7 @@ const OurStory = () => {
             className="w-full md:w-[80%] h-[200px] md:h-[400px] bg-yellow-400 relative border-s rounded-e-[50%]"
             initial={{ y: 70, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.1 }}
+            transition={{ duration: 1 }}
           >
             <AnimatedImg
               path="/images/RectangleSnacks 34.svg"

@@ -38,16 +38,14 @@ const Nut = ({ src, className, index }) => {
   };
 
   return (
-    <motion.div>
+    <motion.div
+      variants={animationVariants}
+      initial="initial"
+      animate="animate"
+    >
       <div className={className}>
         {/* <Image width={120} height={185} src={} /> */}
-        <motion.img
-          src={src}
-          alt=""
-          variants={animationVariants}
-          initial="initial"
-          animate="animate"
-        />
+        <Image width={"300"} height={"300"} src={src} alt={"peanut image"} />
       </div>
     </motion.div>
   );
@@ -143,14 +141,15 @@ const HomePage = () => {
             </motion.p>
 
             <motion.p
-              className="heroRightText -rotate-90 absolute -left-36 sm:-left-4 md:-left-40 lg:-left-20 xl:-left-12 text-9xl md:text-[160px] "
+              // sm:-left-4 md:-left-40 lg:-left-20 xl:-left-12
+              className="heroRightText -rotate-90 absolute - sm:-left-4 md:-left-40 lg:-left-20 xl:-left-14 text-9xl md:text-[160px] "
               initial={{ x: 100, opacity: 0, rotate: -90 }}
               whileInView={{ x: 0, opacity: 1, rotate: -90 }}
               // transition={{ duration: 1, delay: 0.1 }}
             >
-              Mini
+              {t("mini")}
             </motion.p>
-            <div className=" z-10">
+            <div className=" z-20">
               <motion.img
                 src="/images/m&m.png"
                 alt="m&m"
@@ -177,7 +176,7 @@ const HomePage = () => {
               whileInView={{ x: 0, opacity: 1, rotate: 90 }}
               transition={{ delay: 0.6 }}
             >
-              Peanut
+              {t("peanut")}
             </motion.p>
           </div>
         </div>

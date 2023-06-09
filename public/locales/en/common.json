@@ -14,8 +14,9 @@
   "visionH1": "Vision",
     "missionH1": "Mission",
       "galleryH1": "Gallery",
-        "contactUs": "Contact Us"
-
+        "contactUs": "Contact Us",
+    "mini": "mini",
+    "peanut": "peanut"
 
 
 }
