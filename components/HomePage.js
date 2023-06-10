@@ -142,7 +142,7 @@ const HomePage = () => {
 
             <motion.p
               // sm:-left-4 md:-left-40 lg:-left-20 xl:-left-12
-              className="heroRightText -rotate-90 absolute - sm:-left-4 md:-left-40 lg:-left-20 xl:-left-14 text-9xl md:text-[160px] "
+              className="heroRightText -rotate-90 absolute -left-48 sm:-left-24  md:text-white md:-left-40 lg:-left-36 xl:-left-12 text-9xl md:text-[160px] "
               initial={{ x: 100, opacity: 0, rotate: -90 }}
               whileInView={{ x: 0, opacity: 1, rotate: -90 }}
               // transition={{ duration: 1, delay: 0.1 }}
