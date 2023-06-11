@@ -83,17 +83,18 @@ const HomePage = () => {
           </div>
           {/* right hero */}
           <div className="w-full md:w-[50%] h-[500px] FlexCenter relative mt-28 ">
+            {/* me */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.7, type: "fade" }}
-              className="hidden md:block"
+              className="hidden xl:block"
             >
               <Image
                 width="500"
                 height="500"
                 src="/images/heroLine.svg"
-                className="absolute -left-36 lg:-left-20 md:-top-14 w-40 lg:w-56 z-20"
+                className="absolute -left-10 md:w-20 lg:-left-20 md:-top-14 w-10 lg:w-56 z-20"
               />
             </motion.div>
             <Nut
@@ -139,7 +140,6 @@ const HomePage = () => {
             >
               Dragee
             </motion.p>
-
             <motion.p
               // sm:-left-4 md:-left-40 lg:-left-20 xl:-left-12
               className="heroRightText -rotate-90 absolute -left-48 sm:-left-24  md:text-white md:-left-40 lg:-left-36 xl:-left-12 text-9xl md:text-[160px] "
@@ -180,7 +180,7 @@ const HomePage = () => {
             </motion.p>
           </div>
         </div>
-        {/* </div> */}
+
         <Nut
           src={"/images/pngwing 1.svg"}
           className={
