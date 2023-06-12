@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { Font } from "next/font/google";
 import { motion } from "framer-motion";
+import RightHero from "./RightHero";
 
 // const font = Font.load("SF Pro Display");
 
@@ -56,7 +57,9 @@ const HomePage = () => {
   //   font-family: var(--font-sf-pro-display);
   // `;
 
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
+  const currentLanguage = i18n.language;
+  console.log(currentLanguage);
 
   return (
     <div className="overflow-hidden ">
@@ -84,7 +87,7 @@ const HomePage = () => {
           {/* right hero */}
           <div className="w-full md:w-[50%] h-[500px] FlexCenter relative mt-28 ">
             {/* me */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.7, type: "fade" }}
@@ -96,7 +99,7 @@ const HomePage = () => {
                 src="/images/heroLine.svg"
                 className="absolute -left-10 md:w-20 lg:-left-20 md:-top-14 w-10 lg:w-56 z-20"
               />
-            </motion.div>
+            </motion.div> */}
             <Nut
               src={"/images/pngwing 3-1.svg"}
               className={
@@ -132,7 +135,7 @@ const HomePage = () => {
               }
               index={4}
             />
-            <motion.p
+            {/* <motion.p
               className="heroRightText mb-10 absolute ml-12 -top-16 text-7xl"
               variants={quote}
               initial="initial"
@@ -142,7 +145,9 @@ const HomePage = () => {
             </motion.p>
             <motion.p
               // sm:-left-4 md:-left-40 lg:-left-20 xl:-left-12
-              className="heroRightText -rotate-90 absolute -left-48 sm:-left-24  md:text-white md:-left-40 lg:-left-36 xl:-left-12 text-9xl md:text-[160px] "
+              className={`heroRightText -rotate-90 absolute -left-48 sm:-left-24  md:text-white md:-left-40 lg:-left-36 xl:-left-12 text-9xl md:text-[160px] ${
+                currentLanguage === "en" ? "md:-left-40 text-red-500" : ""
+              } `}
               initial={{ x: 100, opacity: 0, rotate: -90 }}
               whileInView={{ x: 0, opacity: 1, rotate: -90 }}
               // transition={{ duration: 1, delay: 0.1 }}
@@ -153,20 +158,6 @@ const HomePage = () => {
               <motion.img
                 src="/images/m&m.png"
                 alt="m&m"
-                // initial={{
-                //   opacity: 0,
-                //   x: 700,
-                // }}
-                // animate={{
-                //   opacity: 1,
-                //   x: 0,
-                // }}
-                // whileInView={true}
-                // transition={{
-                //   type: "spring",
-                //   stiffness: 260,
-                //   damping: 20,
-                // }}
                 className="w-[220px] z-10"
               />
             </div>
@@ -177,7 +168,8 @@ const HomePage = () => {
               transition={{ delay: 0.6 }}
             >
               {t("peanut")}
-            </motion.p>
+            </motion.p> */}
+            <RightHero />
           </div>
         </div>
 
