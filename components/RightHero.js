@@ -41,7 +41,7 @@ const RightHero = () => {
         alt="m&m"
         className="w-[200px] md:w-[280px] z-20"
         initial={{ y: -100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
+        animate={{ y: 0, opacity: 1 }}
       />
 
       <motion.p
