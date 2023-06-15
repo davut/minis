@@ -18,6 +18,10 @@ const AnimatedImg = ({ path, alt, className = "", direction = "700" }) => {
         height={"700"}
         priority
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+        placeholder="blur"
+        blurDataURL="data:..."
+        automatically
+        provided
         className={`${className} w-full `}
       />
     </motion.div>

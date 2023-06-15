@@ -46,7 +46,14 @@ const Nut = ({ src, className, index }) => {
     >
       <div className={className}>
         {/* <Image width={120} height={185} src={} /> */}
-        <Image width={"300"} height={"300"} src={src} alt={"peanut image"} />
+        <Image
+          width={"300"}
+          height={"300"}
+          src={src}
+          alt={"peanut image"}
+          // placeholder="blur"
+          // blurDataURL="/images/m&m.png"
+        />
       </div>
     </motion.div>
   );
@@ -135,41 +142,57 @@ const HomePage = () => {
               }
               index={4}
             />
-            {/* <motion.p
-              className="heroRightText mb-10 absolute ml-12 -top-16 text-7xl"
-              variants={quote}
-              initial="initial"
-              animate="animate"
-            >
-              Dragee
-            </motion.p>
-            <motion.p
-              // sm:-left-4 md:-left-40 lg:-left-20 xl:-left-12
-              className={`heroRightText -rotate-90 absolute -left-48 sm:-left-24  md:text-white md:-left-40 lg:-left-36 xl:-left-12 text-9xl md:text-[160px] ${
-                currentLanguage === "en" ? "md:-left-40 text-red-500" : ""
-              } `}
-              initial={{ x: 100, opacity: 0, rotate: -90 }}
-              whileInView={{ x: 0, opacity: 1, rotate: -90 }}
-              // transition={{ duration: 1, delay: 0.1 }}
-            >
-              {t("mini")}
-            </motion.p>
-            <div className=" z-20">
-              <motion.img
-                src="/images/m&m.png"
-                alt="m&m"
-                className="w-[220px] z-10"
-              />
+
+            {/* right side items */}
+            <div className="flex justify-center items-center h-screen">
+              <motion.p
+                className="heroRightText mb-10 absolute ml-12 -top-10 md:-top-[120px] text-7xl"
+                variants={quote}
+                initial="initial"
+                animate="animate"
+              >
+                Dragee
+              </motion.p>
+              <motion.p
+                className={`heroRightText md:top-[40%] -translate-y-[50%] rotate-90 absolute -left-20 sm:left-10  md:-left-28 text-red-400 lg:-left-20 xl:-left-1 text-9xl md:text-[160px] h-[200px] w-[250px]`}
+                initial={{ x: 100, opacity: 0, rotate: -90 }}
+                whileInView={{ x: 0, opacity: 1, rotate: -90 }}
+              >
+                {t("mini")}
+              </motion.p>
+
+              {/* <motion.img
+        src="/images/m&m.png"
+        alt="m&m"
+        className="w-[200px] md:w-[280px] z-20"
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+      /> */}
+              <motion.div
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+              >
+                <Image
+                  width="500"
+                  height="500"
+                  src="/images/m&m.png"
+                  alt="m&m"
+                  className="w-[200px] md:w-[280px] z-20"
+                  placeholder="blur"
+                  blurDataURL="/images/m&m.png"
+                />
+              </motion.div>
+
+              <motion.p
+                className="heroRightText text-8xl md:text-9xl rotate-90 absolute left-[50%] -translate-x-1/2 z-10"
+                initial={{ x: -100, opacity: 0, rotate: 90 }}
+                whileInView={{ x: 0, opacity: 1, rotate: 90 }}
+                transition={{ delay: 0.6 }}
+              >
+                {t("peanut")}
+              </motion.p>
             </div>
-            <motion.p
-              className="heroRightText text-8xl md:text-9xl rotate-90 absolute left-[48%] md:left-[40%] z-10"
-              initial={{ x: -100, opacity: 0, rotate: 90 }}
-              whileInView={{ x: 0, opacity: 1, rotate: 90 }}
-              transition={{ delay: 0.6 }}
-            >
-              {t("peanut")}
-            </motion.p> */}
-            <RightHero />
+            {/* right side nav end */}
           </div>
         </div>
 

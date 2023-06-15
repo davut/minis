@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const RightHero = () => {
   const quote = {
@@ -36,13 +37,27 @@ const RightHero = () => {
         {t("mini")}
       </motion.p>
 
-      <motion.img
+      {/* <motion.img
         src="/images/m&m.png"
         alt="m&m"
         className="w-[200px] md:w-[280px] z-20"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-      />
+      /> */}
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+      >
+        <Image
+          width="500"
+          height="500"
+          src="/images/m&m.png"
+          alt="m&m"
+          className="w-[200px] md:w-[280px] z-20"
+          placeholder="blur"
+          blurDataURL="/images/m&m.png"
+        />
+      </motion.div>
 
       <motion.p
         className="heroRightText text-8xl md:text-9xl rotate-90 absolute left-[50%] -translate-x-1/2 z-10"
