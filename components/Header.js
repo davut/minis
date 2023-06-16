@@ -11,27 +11,41 @@ import { Logo } from "./Logo";
 export const CustomLink = ({ href, title, className = "" }) => {
   const { asPath } = useRouter();
 
-  //   console.log(pathname);
-
   return (
-    <Link
-      href={href || "#"}
-      className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 ${
-        asPath === href
-          ? "font-bold text-[15px] leading-24 text-yellow-500"
-          : ""
-      }`}
-    >
-      {title}
-      <span
-        className={`h-[1px] inline-block bg-[#FAC800] absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
-         dark:bg-light
-      ${asPath === href ? "w-full font-extrabold" : "w-0"}
-      `}
-      >
-        &nbsp;
-      </span>
-    </Link>
+    <>
+      {href ? (
+        <Link
+          href={href}
+          className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 ${
+            asPath === href
+              ? "font-bold text-[15px] leading-24 text-yellow-500"
+              : ""
+          }`}
+        >
+          {title}
+          <span
+            className={`h-[1px] inline-block bg-[#FAC800] absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
+             dark:bg-light
+            ${asPath === href ? "w-full font-extrabold" : "w-0"}`}
+          >
+            &nbsp;
+          </span>
+        </Link>
+      ) : (
+        <span
+          className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 cursor-pointer`}
+        >
+          {title}
+          <span
+            className={`h-[1px] inline-block bg-[#FAC800] absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
+             dark:bg-light
+            `}
+          >
+            &nbsp;
+          </span>
+        </span>
+      )}
+    </>
   );
 };
 
@@ -54,18 +68,17 @@ const Header = () => {
     push(pathname, asPath, { locale });
   };
 
-  function scrollToContact(href) {
+  function scrollToPage(href) {
     event.preventDefault();
 
-    const contactSection = document.getElementById("contactUs");
+    const page = document.getElementById(href);
 
-    if (contactSection) {
-      contactSection.scrollIntoView({
+    if (page) {
+      page.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
     }
-    router.replace(href);
   }
 
   const PopUpLanguage = ({ className }) => (
@@ -173,12 +186,8 @@ const Header = () => {
                 className="mx-2"
               />
 
-              <span onClick={() => scrollToContact(contactUs)}>
-                <CustomLink
-                  // href="#contactUs"
-                  title={t("navbar.contact")}
-                  className="mx-2"
-                />
+              <span onClick={() => scrollToPage("contactUs")}>
+                <CustomLink title={t("navbar.contact")} className="mx-2" />
               </span>
             </nav>
             {/* popup large */}
