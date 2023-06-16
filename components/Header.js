@@ -13,10 +13,11 @@ export const CustomLink = ({ href, title, className = "" }) => {
 
   return (
     <>
+      {/* show this if it a link */}
       {href ? (
         <Link
           href={href}
-          className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 ${
+          className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 inline-block ${
             asPath === href
               ? "font-bold text-[15px] leading-24 text-yellow-500"
               : ""
@@ -32,8 +33,9 @@ export const CustomLink = ({ href, title, className = "" }) => {
           </span>
         </Link>
       ) : (
-        <span
-          className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 cursor-pointer`}
+        // show this if it not a link
+        <div
+          className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 cursor-pointer inline-block`}
         >
           {title}
           <span
@@ -43,7 +45,7 @@ export const CustomLink = ({ href, title, className = "" }) => {
           >
             &nbsp;
           </span>
-        </span>
+        </div>
       )}
     </>
   );
@@ -225,11 +227,13 @@ const Header = () => {
                 title="Gallery"
                 className="m-2 text-white"
               />
-              <CustomLink
-                href="/contact"
-                title="Contact us"
-                className="m-2 text-white"
-              />
+
+              <span onClick={() => scrollToPage("contactUs")}>
+                <CustomLink
+                  title="Contact us"
+                  className="m-2 text-white mb-3"
+                />
+              </span>
             </nav>
             <PopUpLanguage className="text-white" />
           </motion.div>
