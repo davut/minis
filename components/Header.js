@@ -23,13 +23,13 @@ export const CustomLink = ({ href, title, className = "" }) => {
           }`}
         >
           {title}
-          {/* <span
-            className={`h-[1px] inline-block bg-[#FAC800] absolute left-0 -bottom-0.5 group-hover:w-full ease duration-300
+          <span
+            className={`h-[1px] inline-block bg-[#FAC800] absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
            dark:bg-light
           ${asPath === href ? "w-full font-extrabold" : "w-0"}`}
           >
             &nbsp;
-          </span> */}
+          </span>
         </Link>
       ) : (
         // show this if it not a link
@@ -37,13 +37,13 @@ export const CustomLink = ({ href, title, className = "" }) => {
           className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 cursor-pointer inline-block`}
         >
           {title}
-          {/* <span
-            className={`h-[1px] inline-block bg-[#FAC800] absolute left-0 -bottom-0.5 group-hover:w-full ease duration-300
+          <span
+            className={`h-[1px] inline-block bg-[#FAC800] absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
              dark:bg-light
             `}
           >
             &nbsp;
-          </span> */}
+          </span>
         </div>
       )}
     </>
