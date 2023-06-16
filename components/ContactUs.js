@@ -7,7 +7,7 @@ const ContactUs = () => {
   const { t } = useTranslation("common");
 
   return (
-    <>
+    <section id="contactUs">
       <motion.svg
         // initial={{ y: "100%", x: "-100%" }}
         // whileInView={{ y: 0, x: 0 }}
@@ -91,7 +91,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

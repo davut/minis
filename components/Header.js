@@ -15,7 +15,7 @@ export const CustomLink = ({ href, title, className = "" }) => {
 
   return (
     <Link
-      href={href}
+      href={href || "#"}
       className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 ${
         asPath === href
           ? "font-bold text-[15px] leading-24 text-yellow-500"
@@ -37,7 +37,7 @@ export const CustomLink = ({ href, title, className = "" }) => {
 
 const Header = () => {
   const { t } = useTranslation("common");
-  const { locale, push, pathname, asPath } = useRouter();
+  const { locale, push, pathname, asPath, router } = useRouter();
   // console.log(t("navbar.about", locale, "mmee"));
 
   const [isOpen, setisOpen] = useState(false);
@@ -53,6 +53,20 @@ const Header = () => {
   const handleChangeLanguage = (locale) => {
     push(pathname, asPath, { locale });
   };
+
+  function scrollToContact(href) {
+    event.preventDefault();
+
+    const contactSection = document.getElementById("contactUs");
+
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    router.replace(href);
+  }
 
   const PopUpLanguage = ({ className }) => (
     <div className="flex  items-center">
@@ -158,12 +172,14 @@ const Header = () => {
                 title={t("navbar.about")}
                 className="mx-2"
               />
-              <CustomLink
-                href="/contact"
-                // title={intl.formatMessage({ id: "navbar.contact" })}
-                title={t("navbar.contact")}
-                className="mx-2"
-              />
+
+              <span onClick={() => scrollToContact(contactUs)}>
+                <CustomLink
+                  // href="#contactUs"
+                  title={t("navbar.contact")}
+                  className="mx-2"
+                />
+              </span>
             </nav>
             {/* popup large */}
             <PopUpLanguage />
