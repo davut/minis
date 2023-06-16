@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import { CancelIcon } from "./Icon";
 import { useTranslation } from "next-i18next";
 import { Logo } from "./Logo";
@@ -17,20 +16,20 @@ export const CustomLink = ({ href, title, className = "" }) => {
       {href ? (
         <Link
           href={href}
-          className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 inline-block ${
+          className={`${className} relative  group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 inline-block ${
             asPath === href
               ? "font-bold text-[15px] leading-24 text-yellow-500"
               : ""
           }`}
         >
           {title}
-          <span
-            className={`h-[1px] inline-block bg-[#FAC800] absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
-             dark:bg-light
-            ${asPath === href ? "w-full font-extrabold" : "w-0"}`}
+          {/* <span
+            className={`h-[1px] inline-block bg-[#FAC800] absolute left-0 -bottom-0.5 group-hover:w-full ease duration-300
+           dark:bg-light
+          ${asPath === href ? "w-full font-extrabold" : "w-0"}`}
           >
             &nbsp;
-          </span>
+          </span> */}
         </Link>
       ) : (
         // show this if it not a link
@@ -38,13 +37,13 @@ export const CustomLink = ({ href, title, className = "" }) => {
           className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 cursor-pointer inline-block`}
         >
           {title}
-          <span
-            className={`h-[1px] inline-block bg-[#FAC800] absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
+          {/* <span
+            className={`h-[1px] inline-block bg-[#FAC800] absolute left-0 -bottom-0.5 group-hover:w-full ease duration-300
              dark:bg-light
             `}
           >
             &nbsp;
-          </span>
+          </span> */}
         </div>
       )}
     </>
