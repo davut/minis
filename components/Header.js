@@ -10,42 +10,26 @@ import { Logo } from "./Logo";
 export const CustomLink = ({ href, title, className = "" }) => {
   const { asPath } = useRouter();
 
-  return (
-    <>
-      {/* show this if it a link */}
-      {href ? (
-        <Link
-          href={href}
-          className={`${className} relative  group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 inline-block ${
+  /*     ${
             asPath === href
               ? "font-bold text-[15px] leading-24 text-yellow-500"
               : ""
-          }`}
-        >
-          {title}
-          <span
-            className={`h-[1px] inline-block bg-[#FAC800] absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
-           dark:bg-light
-          ${asPath === href ? "w-full font-extrabold" : "w-0"}`}
-          >
-            &nbsp;
-          </span>
-        </Link>
-      ) : (
-        // show this if it not a link
-        <div
-          className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 cursor-pointer inline-block`}
-        >
-          {title}
-          <span
-            className={`h-[1px] inline-block bg-[#FAC800] absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
+          } */
+  /*  ${asPath === href ? "w-full font-extrabold" : "w-0 hidden"} */
+  return (
+    <>
+      <div
+        className={`${className} relative group w-78 font-sfprodisplay font-normal text-[15px] text-xl  leading-24 text-gray-600 cursor-pointer inline-block`}
+      >
+        {title}
+        <span
+          className={`h-[1px] inline-block bg-[#FAC800] w-0 absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
              dark:bg-light
             `}
-          >
-            &nbsp;
-          </span>
-        </div>
-      )}
+        >
+          &nbsp;
+        </span>
+      </div>
     </>
   );
 };
@@ -175,17 +159,19 @@ const Header = () => {
           {/* Desktop nav */}
           <div className=" justify-between items-center hidden lg:flex">
             <nav className=" mr-16">
-              <CustomLink href="/" title={t("navbar.about")} className="mx-2" />
-              <CustomLink
-                href="/products"
-                title={t("navbar.products")}
-                className="mx-2"
-              />
-              <CustomLink
-                href="/gallery"
-                title={t("navbar.about")}
-                className="mx-2"
-              />
+              <span onClick={() => scrollToPage("OurStory")}>
+                <CustomLink
+                  // href="#OurStory"
+                  title={t("navbar.about")}
+                  className="mx-2"
+                />
+              </span>
+              <span onClick={() => scrollToPage("OurProduct")}>
+                <CustomLink title={t("navbar.products")} className="mx-2" />
+              </span>
+              <span onClick={() => scrollToPage("Gallary")}>
+                <CustomLink title={t("navbar.gallery")} className="mx-2" />
+              </span>
 
               <span onClick={() => scrollToPage("contactUs")}>
                 <CustomLink title={t("navbar.contact")} className="mx-2" />
@@ -210,22 +196,19 @@ const Header = () => {
               className="flex flex-col justify-center items-center text-light/75"
               onClick={() => setisOpen(false)}
             >
-              <CustomLink
-                href="about"
-                title="About us
+              <span onClick={() => scrollToPage("OurStory")}>
+                <CustomLink
+                  title="About us
 "
-                className="m-2 text-white font-bold text-[15px] leading-24 text-yellow-500"
-              />
-              <CustomLink
-                href="/products"
-                title="Products"
-                className="m-2 text-white"
-              />
-              <CustomLink
-                href="/gallery"
-                title="Gallery"
-                className="m-2 text-white"
-              />
+                  className="m-2 text-white font-bold text-[15px] leading-24"
+                />
+              </span>
+              <span onClick={() => scrollToPage("OurProduct")}>
+                <CustomLink title="Products" className="m-2 text-white" />
+              </span>
+              <span onClick={() => scrollToPage("Gallary")}>
+                <CustomLink title="Gallery" className="m-2 text-white" />
+              </span>
 
               <span onClick={() => scrollToPage("contactUs")}>
                 <CustomLink
@@ -234,7 +217,7 @@ const Header = () => {
                 />
               </span>
             </nav>
-            <PopUpLanguage className="text-white" />
+            <PopUpLanguage className="text-white mt-2" />
           </motion.div>
         ) : null}
       </div>

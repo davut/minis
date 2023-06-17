@@ -8,7 +8,7 @@ const Gallaries = () => {
   const { t } = useTranslation("common");
 
   return (
-    <div>
+    <div id="Gallary">
       <div className="cont grid grid-cols-12">
         <div className="col-span-12 md:col-span-4 ">
           <h1 className="font-inter font-black text-6xl leading-47 text-left text-top tracking-wide text-[#3A8DDE] mb-4">

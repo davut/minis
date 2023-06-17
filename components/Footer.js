@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
 
           <nav className="mt-4 sm:mt-0">
-            <ul className="flex flex-wrap">
+            <ul className="flex justify-center items-center flex-wrap">
               <li>
                 <CustomLink
                   href="/"

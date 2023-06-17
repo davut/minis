@@ -110,7 +110,7 @@ const HomePage = () => {
             <Nut
               src={"/images/pngwing 3-1.svg"}
               className={
-                "absolute w-[120px] h-[185px] top-0 left-0 rounded-l-[16px] rotate-[106px]"
+                "absolute w-[120px] h-[185px] top-0 left-0 rounded-l-[16px] rotate-[106px] hidden md:block"
               }
               index={0}
             />
@@ -131,7 +131,7 @@ const HomePage = () => {
             <Nut
               src={"/images/pngwing 8.svg"}
               className={
-                "absolute w-[163px] h-[185px] bottom-10 left-0 rounded-r-[34px] rotate-[75px]"
+                "absolute w-[163px] h-[185px] bottom-10 left-0 rounded-r-[34px] rotate-[75px] hidden md:block"
               }
               index={3}
             />
@@ -177,7 +177,7 @@ const HomePage = () => {
                   height="500"
                   src="/images/m&m.png"
                   alt="m&m"
-                  className="w-[200px] md:w-[280px] z-20"
+                  className="w-[200px] md:w-[280px] z-30"
                   placeholder="blur"
                   blurDataURL="/images/m&m.png"
                 />
@@ -231,7 +231,7 @@ const HomePage = () => {
       <Nut
         src={"/images/pngwing 3-1.svg"}
         className={
-          "absolute w-[200px] h-[123px] -bottom-0 right-[200px]  rotate-[75px]"
+          "absolute w-[200px] h-[123px] -bottom-0 right-[200px]  rotate-[75px] hidden md:block"
         }
         index={1}
       />
