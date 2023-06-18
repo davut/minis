@@ -71,7 +71,7 @@ const HomePage = () => {
   return (
     <div className="overflow-hidden ">
       <div className="heroPage w-full h-full overflow-hidden relative pt-20">
-        <div className="cont mt-5 flex items-center justify-center flex-wrap h-full relative">
+        <div className="cont mt-5 md:flex items-center justify-center h-full relative">
           {/* left hero */}
           <div className="w-full md:w-[50%] relative">
             {" "}
