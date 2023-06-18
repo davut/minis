@@ -71,7 +71,7 @@ const HomePage = () => {
   return (
     <div className="overflow-hidden ">
       <div className="heroPage w-full h-full overflow-hidden relative pt-20">
-        <div className="cont mt-5 md:flex items-center justify-center h-full relative">
+        <div className="cont mt-5 md:flex items-center justify-center h-full relative gap-x-10">
           {/* left hero */}
           <div className="w-full md:w-[50%] relative">
             {" "}
@@ -131,7 +131,7 @@ const HomePage = () => {
             <Nut
               src={"/images/pngwing 8.svg"}
               className={
-                "absolute w-[163px] h-[185px] bottom-10 left-0 rounded-r-[34px] rotate-[75px] hidden md:block"
+                "absolute w-[163px] h-[185px] bottom-10 -left-20 rounded-r-[34px] rotate-[75px] hidden md:block"
               }
               index={3}
             />
@@ -228,13 +228,13 @@ const HomePage = () => {
           d="M0,160L30,165.3C60,171,120,181,180,170.7C240,160,300,128,360,138.7C420,149,480,203,540,192C600,181,660,107,720,90.7C780,75,840,117,900,154.7C960,192,1020,224,1080,202.7C1140,181,1200,107,1260,96C1320,85,1380,139,1410,165.3L1440,192L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
         ></path>
       </motion.svg>
-      <Nut
+      {/* <Nut
         src={"/images/pngwing 3-1.svg"}
         className={
           "absolute w-[200px] h-[123px] -bottom-0 right-[200px]  rotate-[75px] hidden md:block"
         }
         index={1}
-      />
+      /> */}
     </div>
   );
 };
