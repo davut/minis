@@ -44,13 +44,15 @@ const Nut = ({ src, className, index }) => {
       initial="initial"
       animate="animate"
     >
-      <div className={className}>
+      <div className={`${className} `}>
         {/* <Image width={120} height={185} src={} /> */}
         <Image
           width={"300"}
           height={"300"}
           src={src}
           alt={"peanut image"}
+          className="blur-xm"
+
           // placeholder="blur"
           // blurDataURL="/images/m&m.png"
         />
