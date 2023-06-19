@@ -2,14 +2,9 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const AnimatedImg = ({ path, alt, className = "", direction = "700" }) => {
+const AnimatedImg = ({ path, alt, className = "" }) => {
   return (
-    <motion.div
-      className="overflow-x-hidden overflow-hiddden"
-      // initial={{ x: direction }}
-      // animate={{ x: 0 }}
-      // transition={{ delay: 0.3, staggerChildren: 0.08 }}
-    >
+    <div className="overflow-x-hidden overflow-hiddden">
       {/* <HeroPageAnimatedLeft /> */}
       <Image
         src={path}
@@ -20,7 +15,7 @@ const AnimatedImg = ({ path, alt, className = "", direction = "700" }) => {
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         className={`${className} w-full `}
       />
-    </motion.div>
+    </div>
   );
 };
 

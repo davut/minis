@@ -186,7 +186,7 @@ const HomePage = () => {
               </motion.div>
 
               <motion.p
-                className="heroRightText text-8xl md:text-9xl rotate-90 absolute left-[50%] -translate-x-1/2 z-10"
+                className="heroRightText text-8xl md:text-9xl rotate-90 absolute left-[45%] -translate-x-1/2 z-10"
                 initial={{ x: -100, opacity: 0, rotate: 90 }}
                 whileInView={{ x: 0, opacity: 1, rotate: 90 }}
                 transition={{ delay: 0.6 }}

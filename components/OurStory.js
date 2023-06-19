@@ -11,7 +11,7 @@ const OurStory = () => {
         <div className="flex flex-col md:flex-row items-start cont overflow-hidden">
           <div className="w-full md:w-1/2 relative overflow-hidden">
             <motion.div
-              className="w-full md:w-[80%] h-[200px] md:h-[400px] bg-yellow-400 relative border-s rounded-e-[50%]"
+              className="w-full md:w-[80%] h-[200px] md:h-[400px] bg-yellow-400 relative border-s rounded-e-[50%] overflow-hidden"
               initial={{ y: 70, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1 }}
