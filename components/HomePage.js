@@ -4,10 +4,11 @@ import React from "react";
 import { Font } from "next/font/google";
 import { motion } from "framer-motion";
 import RightHero from "./RightHero";
+import LeftNav from "./RightHero";
 
 // const font = Font.load("SF Pro Display");
 
-const quote = {
+export const quote = {
   initial: {
     opacity: 0,
     y: 50,
@@ -146,7 +147,7 @@ const HomePage = () => {
             />
 
             {/* right side items */}
-            <div className="flex justify-center items-center h-screen">
+            {/* <div className="flex justify-center items-center h-screen">
               <motion.p
                 className="heroRightText mb-10 absolute ml-12 -top-10 md:-top-[120px] text-7xl"
                 variants={quote}
@@ -163,13 +164,7 @@ const HomePage = () => {
                 {t("mini")}
               </motion.p>
 
-              {/* <motion.img
-        src="/images/m&m.png"
-        alt="m&m"
-        className="w-[200px] md:w-[280px] z-20"
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-      /> */}
+             
               <motion.div
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -193,8 +188,9 @@ const HomePage = () => {
               >
                 {t("peanut")}
               </motion.p>
-            </div>
+            </div> */}
             {/* right side nav end */}
+            <RightHero />
           </div>
         </div>
 
@@ -208,7 +204,7 @@ const HomePage = () => {
         <Nut
           src={"/images/pngwing 7.svg"}
           className={
-            "absolute w-[113px] h-[133px] bottom-20 -right-2 rounded-r-[34px] rotate--25"
+            "absolute w-[113px] h-[133px] bottom-20 -right-2 rounded-r-[34px] rotate--25 hidden md:block"
           }
           index={0}
         />
