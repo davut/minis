@@ -74,11 +74,11 @@ const Testing = () => {
             <Image
               width="500"
               height="500"
-              src="/images/minis-m&m.png"
+              src="/images/yellow-minis.webp"
               alt="minis"
               className="w-[200px] md:w-[280px] z-30"
               placeholder="blur"
-              blurDataURL="/images/minis-m&m.png"
+              blurDataURL="/images/yellow-minis.webp"
             />
           </div>
           <div className="w-5/12 -ml-0 lg:ml-10">
