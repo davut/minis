@@ -54,7 +54,7 @@ const Gallaries = () => {
                   /> */}
                   <AnimatedImg
                     alt="women"
-                    path="/images/womanView.svg"
+                    path="/images/minis-gallery-1.webp"
                     // width="500"
                     // height="500"
                     className=" w-72 h-96 object-cover  absolute bottom-10 left-4"
@@ -68,7 +68,7 @@ const Gallaries = () => {
                 <div className=" w-72 h-96 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <Image
                     alt="icon"
-                    src="/images/RectangleMission 36.svg"
+                    src="/images/umbrella.webp"
                     width="500"
                     height="500"
                     className="w-full h-full object-cover"
@@ -89,14 +89,14 @@ const Gallaries = () => {
                   {" "}
                   <Image
                     alt="icon"
-                    src="/images/RectangleMission 36.svg"
+                    src="/images/cornetto.webp"
                     width="500"
                     height="500"
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
-              <div className="inline-block px-3">
+              {/* <div className="inline-block px-3">
                 <div className=" w-72 h-96 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   {" "}
                   <Image
@@ -107,7 +107,7 @@ const Gallaries = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-              </div>
+              </div> */}
               <div className="absolute top-0 right-0 w-20 h-full bg-white bg-opacity-50 blur-sm shadow"></div>
             </div>
           </div>

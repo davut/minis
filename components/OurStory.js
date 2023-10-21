@@ -9,17 +9,17 @@ const OurStory = () => {
     <section id="OurStory">
       <div className="py-10">
         <div className="flex flex-col md:flex-row items-start cont overflow-hidden">
-          <div className="w-full md:w-1/2 relative overflow-hidden">
+          <div className="w-full md:w-1/2 relative">
             <motion.div
-              className="w-full md:w-[80%] h-[200px] md:h-[400px] bg-yellow-400 relative border-s rounded-e-[50%] overflow-hidden"
+              className="w-full md:w-[80%] h-[450px] md:h-[400px] relative"
               initial={{ y: 70, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1 }}
             >
               <AnimatedImg
-                path="/images/RectangleSnacks 34.svg"
+                path="/images/story-img.webp"
                 alt="snacks"
-                className="absolute w-full h-full -mt-5 -ml-5 object-cover"
+                className="w-full h-full object-cover"
                 // direction="-100d%"
               />
             </motion.div>

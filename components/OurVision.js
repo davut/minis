@@ -21,7 +21,7 @@ const OurVision = () => {
           /> */}
           <div style={{ width: "50px" }}>
             <AnimatedImg
-              path="/images/GroupEyes.svg"
+              path="/images/eye-icon.webp"
               alt="eye logo"
               className=" w-10"
               direction="-100"
@@ -61,18 +61,18 @@ const OurVision = () => {
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               // transition={{ duration: 1, delay: 0.1 }}
-              className="bg-yellow-500 h-[250px] w-[250px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[400px] rounded-full"
+              className="h-[250px] w-[250px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[400px] rounded-full"
             >
               {/* <Image
-          src="/images/EllipseVisionImg.svg"
+          src="/images/sionImg.svg"
           className="ml-5 w-full h-full object-cover"
           width={500}
           height={500}
         /> */}
               <AnimatedImg
-                path="/images/EllipseVisionImg.svg"
+                path="/images/cornetto-ellipse.webp"
                 alt="vision img"
-                className="ml-5 w-full h-full object-cover"
+                className="w-full h-full"
               />
             </motion.div>
           </div>

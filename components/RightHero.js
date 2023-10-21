@@ -38,11 +38,11 @@ const RightHero = () => {
           <Image
             width="500"
             height="500"
-            src="/images/m&m.png"
-            alt="m&m"
-            className="w-[200px] md:w-[230px] z-30 shadow"
+            src="/images/minis-m&m.png"
+            alt="minis"
+            className="w-[200px] md:w-[230px] z-30"
             placeholder="blur"
-            blurDataURL="/images/m&m.png"
+            blurDataURL="/images/minis-m&m.png"
           />
         </div>
         <div

@@ -84,7 +84,7 @@ const Header = () => {
             />
           ) : (
             <motion.img
-              src="/images/VectorLanguage.svg"
+              src="/images/tabler-icon-world.webp"
               width="700"
               height="700"
               className="w-5 cursor-pointer"

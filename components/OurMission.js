@@ -78,15 +78,15 @@ const OurMission = () => {
         <div className="w-full md:relative">
           <div className="relative mx-auto max-w-7xl">
             <motion.div
-              className="bg-yellow-500 h-[250px] md:h-[350px] lg:h-[400px] rounded-lg relative"
+              className="h-[250px] md:h-[350px] lg:h-[400px] rounded-lg relative"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               transition={{ delay: 0.3, staggerChildren: 0.08 }}
             >
               <AnimatedImg
-                path="/images/RectangleMission 36.svg"
+                path="/images/mission-img.webp"
                 alt="chocolate"
-                className="absolute bottom-[2%] left-[2%] w-full h-full object-cover"
+                className="absolute bottom-[2%] left-[2%] w-full h-full object-contain"
                 direction="100"
               />
             </motion.div>
@@ -96,7 +96,7 @@ const OurMission = () => {
         <div className="md:relative">
           <div style={{ width: "50px" }}>
             <AnimatedImg
-              path="/images/missionSvg.svg"
+              path="/images/mission-icon.webp"
               alt="eye logo"
               className="w-12 mb-3"
               style={{ width: "16px" }}

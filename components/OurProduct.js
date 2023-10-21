@@ -10,21 +10,21 @@ const OurProduct = () => {
 
   let product = [
     {
-      img: "/images/ad 1.svg",
+      img: "/images/blue-minis.webp",
       name: t("ourProductB"),
       desc: "Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed .",
       color: "bg-[#3A8DDE]",
       delay: 0.1,
     },
     {
-      img: "/images/chcolateImg.svg",
+      img: "/images/choco-minis.webp",
       name: t("ourProductC"),
       desc: "Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed .",
       color: "bg-[#5E2A2B]",
       delay: 0.2,
     },
     {
-      img: "/images/chocolateYello.svg",
+      img: "/images/yellow-minis.webp",
       name: t("ourProductA"),
       desc: "Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed .",
       color: "bg-[#FACD00]",

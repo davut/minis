@@ -111,35 +111,35 @@ const HomePage = () => {
               />
             </motion.div> */}
             <Nut
-              src={"/images/pngwing 3-1.svg"}
+              src={"/images/pngwing 3-1.webp"}
               className={
                 "absolute w-[120px] h-[185px] top-0 left-0 rounded-l-[16px] rotate-[106px] hidden md:block"
               }
               index={0}
             />
             <Nut
-              src={"/images/pngwing 4.svg"}
+              src={"/images/pngwing 4.webp"}
               className={
                 "absolute w-[120px] h-[185px] -top-[24%] -left-20 rounded-l-[16px] rotate-[106px]"
               }
               index={1}
             />
-            <Nut
-              src={"/images/pngwing 10.svg"}
+            {/* <Nut
+              src={"/images/pngwing 10.webp"}
               className={
                 "absolute w-20 h-20 -top-[24%] left-30 rounded-r-[37px] rotate-[106px]"
               }
               index={2}
-            />
+            /> */}
             <Nut
-              src={"/images/pngwing 8.svg"}
+              src={"/images/pngwing 8.webp"}
               className={
                 "absolute w-[163px] h-[185px] bottom-10 -left-20 rounded-r-[34px] rotate-[75px] hidden md:block"
               }
               index={3}
             />
             <Nut
-              src={"/images/pngwing 2.svg"}
+              src={"/images/pngwing 2.webp"}
               className={
                 "absolute w-[104px] h-[123px] -top-10 left-24 rounded-r-[34px] rotate-[75px] blur-[05]"
               }
@@ -195,14 +195,14 @@ const HomePage = () => {
         </div>
 
         <Nut
-          src={"/images/pngwing 1.svg"}
+          src={"/images/pngwing 1.webp"}
           className={
             "absolute w-[174px] h-[199px] top-10 -right-10 rounded-r-[34px] rotate-[75px] blur-[05]"
           }
           index={1}
         />
         <Nut
-          src={"/images/pngwing 7.svg"}
+          src={"/images/pngwing 7.webp"}
           className={
             "absolute w-[113px] h-[133px] bottom-20 -right-2 rounded-r-[34px] rotate--25 hidden md:block"
           }
