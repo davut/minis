@@ -3,20 +3,38 @@
   "navbar.products": "Products",
   "navbar.gallery": "Gallery",
   "navbar.contact": "Contact us",
-  "home.h1" : "Peanut",
-
-
+  "home.h1": "Peanut",
 
   "ourProductA": "Peanut dragee",
   "ourProductB": "Crispy dragee",
   "ourProductC": "Chocolate dragee",
-  "ourStory":"Our Story Begins",
+  "ourStory": "Our Story Begins",
   "visionH1": "Vision",
-    "missionH1": "Mission",
-      "galleryH1": "Gallery",
-        "contactUs": "Contact Us",
-    "mini": "mini",
-    "peanut": "peanut"
+  "missionH1": "Mission",
+  "galleryH1": "Gallery",
+  "contactUs": "Contact Us",
+  "mini": "mini",
+  "peanut": "peanut",
 
+  "peanutMainBody": " Discover the delicious world of Minis with our Mini Dragee featuring peanuts. These small, round confections are packed with flavor, combining the satisfying crunch of a candy shell with the rich, nutty goodness of peanuts.",
 
+  "ourStoryBody1": "Minis was born from a simple yet powerful idea: to create miniature delights that bring joy. Founded by a team of food enthusiasts, we've dedicated ourselves to crafting bite-sized treats that not only satisfy your taste buds but also brighten your day. Our journey began with the vision of redefining snacking. We sought to blend quality, creativity, and deliciousness, resulting in the birth of Minis Mini Dragee with Peanut. At Minis, we're unwavering in our commitment to excellence. We use top-notch ingredients like whole peanuts, enrobed in a variety of candy coatings. This meticulous approach creates snacks that are not only delicious but also visually enticing.",
+
+  "ourStoryBody2": "Our passion for crafting these little wonders has made Minis a symbol of quality and innovation in the snack industry. We continue to expand our range, offering you miniature, magnificent, and memorable experiences. As you savor Minis Mini Dragee with Peanut, you're enjoying a piece of our passion. Join us on this delectable journey, whether you're treating yourself or sharing with loved ones. Thank you for being a part of our story. We're excited to continue bringing you the joy of Minis, one bite at a time.",
+
+  "visionBody1": "At Minis, we're dedicated to transforming snacking into a joy-filled experience. Our vision is to lead the way in creating exceptional, bite-sized delights that surprise and delight. We aim to be the go-to choice for those seeking quality, flavor, and fun in their snacks. Join us on our journey to redefine snacking, one Minis creation at a time.",
+  "visionBody2": "Thank you for being part of our delicious dream.",
+
+  "missionBody1": " Minis is on a mission to revolutionize snacking. Our purpose is to infuse joy and excitement into every snack-time moment. We are committed to crafting miniature delights that elevate your everyday experiences. Our mission is to continually push the boundaries of snack innovation, introducing new flavors, textures, and sensations that surprise and satisfy. We aspire to set the standard for what's miniature, magnificent, and memorable in the world of snacking.",
+  "missionBody2": "We aim to be your first choice for snacks that perfectly balance quality, deliciousness, and fun. At Minis, our mission is to make snacking a source of delight for all, and we invite you to join us on this delicious journey. Thank you for being a part of our mission to redefine snacking, one Minis creation at a time.",
+
+  "crispyDragee": "Discover our Crispy Dragee, a snack that's all about the perfect bite. Each piece is a mini masterpiece of crispiness, with a candy shell that shatters to reveal a delectable surprise inside. It's the ultimate combination of crunchy satisfaction and sweet indulgence. Try our Crispy Dragee and experience the joy of snacking at its finest.",
+
+  "chocolateDragee": "Step into a world of sweetness with our Chocolate Dragee. These bite-sized delights feature a delectable chocolate center, encased in a crisp candy shell. Each piece is a burst of rich, creamy chocolate flavor that will transport your taste buds to a world of pure delight. Savor the moment with our Chocolate Dragee and experience a miniature masterpiece that's all about indulgence.",
+
+  "peanutDragee": "For nut lovers, our Peanut Dragee is a true treasure. These mini marvels feature whole peanuts, enveloped in a vibrant candy coating. The contrast between the sweet candy shell and the hearty peanut inside creates a satisfying crunch and a nutty goodness that's hard to resist. Give in to your nutty cravings with our Peanut Dragee and enjoy a delightful snack that's both wholesome and delicious.",
+
+  "galleryBody": "Explore our gallery to feast your eyes on a spectrum of colorful, delectable creations. From our vibrant candy-coated dragees to the luscious chocolate delights, each image tells a story of the joy we bring to snacking. Discover the artistry and delight in every miniature masterpiece.",
+
+  "contactBody": "Have questions, feedback, or just want to say hello? We'd love to hear from you. Get in touch with us, and our friendly team will be here to assist you. Your thoughts matter, and we're here to ensure your experience with us is as delightful as our snacks. Contact us today!"
 }

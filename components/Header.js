@@ -114,9 +114,9 @@ const Header = () => {
               </li>
               <li
                 className="text-gray-800 cursor-pointer"
-                onClick={() => handleChangeLanguage("tu")}
+                onClick={() => handleChangeLanguage("tr")}
               >
-                Turkmen
+                Turkish
               </li>
             </ul>
           </motion.div>

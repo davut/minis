@@ -33,16 +33,9 @@ const OurVision = () => {
           >
             <AnimatedText text={t("visionH1")} direction="left" />
           </h1>
-          <p className="text-gray-600 leading-9 text-xl">
-            Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed
-            tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet
-            consectetur. Viverra at vel purus sed tristique elementum tincidunt
-            viverra.
-          </p>
+          <p className="text-gray-600 leading-9 text-xl">{t("visionBody1")}</p>
           <p className="text-gray-600 leading-9 text-xl mt-4">
-            Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed
-            tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet
-            consectetur.
+            {t("visionBody2")}
           </p>
         </div>
         <div className="md:w-1/2 mt-4 md:mt-0 md:ml-8 ">

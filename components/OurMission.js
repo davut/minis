@@ -106,16 +106,9 @@ const OurMission = () => {
           <h1 className="font-inter font-extrabold text-3xl md:text-5xl leading-10 tracking-tighter text-[#FBCB00] flex-none order-0 mb-5 text-center md:text-start #863A20">
             <AnimatedText text={t("missionH1")} direction="left" />
           </h1>
-          <p className="text-gray-600 leading-9 text-xl">
-            Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed
-            tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet
-            consectetur. Viverra at vel purus sed tristique elementum tincidunt
-            viverra.
-          </p>
+          <p className="text-gray-600 leading-9 text-xl">{t("missionBody1")}</p>
           <p className="text-gray-600 leading-9 text-xl mt-4">
-            Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed
-            tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet
-            consectetur.
+            {t("missionBody2")}
           </p>
         </div>
       </div>

@@ -15,10 +15,7 @@ const Gallaries = () => {
             {t("galleryH1")}
           </h1>
           <p className=" leading-9 text-xl text-[#3A8DDE] my-10">
-            Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed
-            tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet
-            consectetur. Viverra at vel purus sed tristique elementum tincidunt
-            viverra.
+            {t("galleryBody")}
           </p>
           <div className="flex gap-x-5 my-10">
             <div className=" w-16 h-16 rounded-full cursor-pointer bg-[#fbce00] flex justify-center items-center">

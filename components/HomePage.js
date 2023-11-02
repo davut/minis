@@ -87,10 +87,9 @@ const HomePage = () => {
               <span className="text-sf-pro-display font-extrabold  text-[80px] leading-85 text-[#863A20]">
                 {t("home.h1")}
               </span>
-              <span className=" inline-block">has it</span>
+              {/* <span className=" inline-block">has it</span> */}
               <p className="w-full md:w-[90%] text-2xl leading-normal">
-                Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed
-                tristique elementum tincidunt viverra.
+                {t("peanutMainBody")}
               </p>
             </motion.h1>
           </div>

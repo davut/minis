@@ -29,15 +29,10 @@ const OurStory = () => {
               {t("ourStory")}
             </h1>
             <p className="text-gray-600 leading-9 text-xl">
-              Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed
-              tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet
-              consectetur. Viverra at vel purus sed tristique elementum
-              tincidunt viverra.
+              {t("ourStoryBody1")}
             </p>
             <p className="text-gray-600 leading-9 text-xl mt-4">
-              Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed
-              tristique elementum tincidunt viverra. Lorem ipsum dolor sit amet
-              consectetur.
+              {t("ourStoryBody2")}
             </p>
           </div>
         </div>

@@ -35,8 +35,7 @@ const ContactUs = () => {
                 {t("contactUs")}
               </h1>
               <p className=" leading-9 text-xl text-[#863A20]">
-                Lorem ipsum dolor sit amet consectetur. Viverra at vel purus sed
-                tristique elementum tincidunt viverra. Lorem ipsum dolor sit
+                {t("contactBody")}
               </p>
               <div className="flex">
                 <div className="bg-[#FBCB00] rounded-full p-2">
