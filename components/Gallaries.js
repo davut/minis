@@ -56,9 +56,9 @@ const Gallaries = () => {
                     // height="500"
                     className=" w-72 h-96 object-cover  absolute bottom-10 left-4"
                   />
-                  <button className="absolute top-[50%] left-[50%] text-xl text-white z-20">
+                  {/* <button className="absolute top-[50%] left-[50%] text-xl text-white z-20">
                     View
-                  </button>
+                  </button> */}
                 </div>
               </div>
               <div className="inline-block px-3">

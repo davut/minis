@@ -15,8 +15,17 @@
   "contactUs": "Bize Ulaşın",
   "mini": "mini",
   "peanut": "fıstık",
+  "dragee": "draje",
 
-  "peanutMainBody": "Minis'in fıstık dolgulu Mini Drajesi ile lezzetli bir dünyayı keşfedin. Bu küçük, yuvarlak tatlılar, tatlı kabuğun doyurucu çıtırtısı ile fıstığın zengin ve cezbedici fındık tadını bir araya getiriyor.",
+  "gallery.yourEmail": "E-postanız",
+  "gallery.yourMessage": "Mesajınız",
+  "gallery.send": "Mesaj Gönder",
+
+  "langs.en": "İngilizce",
+  "langs.ru": "Rusça",
+  "langs.tr": "Türkçe",
+
+  "peanutMainBody": "Minis'in yer fıstık dolgulu Mini Drajesi ile lezzetli bir dünyayı keşfedin. Bu küçük, yuvarlak tatlılar, tatlı kabuğun doyurucu çıtırtısı ile yer fıstığınin zengin ve cezbedici tadını bir araya getiriyor.",
 
   "ourStoryBody1": "Minis, sevinci getiren minyatür lezzetler yaratma fikriyle doğdu. Yiyecek tutkunu bir ekip tarafından kurulan Minis, damak tadınızı tatmin etmekle kalmayıp gününüzü aydınlatan atıştırmalıklar üretmeye adanmıştır. Yolculuğumuz, atıştırmalıkları yeniden tanımlama vizyonuyla başladı. Kalite, yaratıcılık ve lezzeti harmanlamayı hedefledik ve Minis Mini Fıstıklı Draje'nin doğmasına yol açtı. Minis olarak mükemmeliyete olan bağlılığımız sarsılmaz. En iyi malzemeleri kullanıyoruz ve bunlar arasında tam fıstık, çeşitli şeker kaplamalarında bulunur. Bu titiz yaklaşım, sadece lezzetli değil, aynı zamanda görsel olarak çekici atıştırmalıklar yaratır.",
 
@@ -34,7 +43,7 @@
 
   "chocolateDragee": "Tatlılık dünyasına bir adım atın ve Chocolate Dragee ile ödüllendirin. Bu minyatür lezzetler, gevrek bir şeker kabuğunda bulunan leziz bir çikolata merkezine sahiptir. Her biri sizi saf neşenin bir dünyasına taşıyan zengin, kremsi çikolata lezzetinin patlamasıdır. Chocolate Dragee'mizle anın tadını çıkarın ve bunun sadece lüks olduğu bir minyatür başyapıtı deneyimleyin.",
 
-  "peanutDragee": "Fındık severler için Peanut Dragee gerçek bir hazine. Bu minik harikalar, canlı bir şeker kaplamaya sarılmış tam fındıkları içerir. Tatlı şeker kabuğu ile sağlam fındık arasındaki kontrast, dirençli bir çıtırtı ve dayanılmaz derecede lezzetli bir fındık lezzeti yaratır. Peanut Dragee'mizle fındık özlemlerinize teslim olun ve hem sağlıklı hem de lezzetli bir atıştırmalığın tadını çıkarın.",
+  "peanutDragee": "Yer fıstığı sevenler için, Yer Fıstığı Drajemiz gerçek bir hazine. Bu minik harikalar, canlı bir şeker kaplamaya sarılmış tam yer fıstığı içerir. Tatlı şeker kabuğu ile sağlam yer fıstığı arasındaki kontrast, doyurucu bir çıtırtı ve yer fıstığı tadı yaratır. Yer fıstığı isteğinize yenik düşün ve hem sağlıklı hem de lezzetli bir atıştırmalığın tadını çıkarın.",
 
   "galleryBody": "Gözlerinizi renkli, leziz yaratıkların bir yelpazesine daldırmak için galerimizi keşfedin. Canlı şeker kaplamalı drajelerimizden lezzetli çikolata harikalarına kadar her resim, atıştırmalıklara getirdiğimiz neşenin hikayesini anlatıyor. Her minyatür başyapıtta sanat ve neşenin tadını çıkarın.",
 

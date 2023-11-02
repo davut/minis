@@ -17,7 +17,7 @@ const RightHero = () => {
           initial="initial"
           animate="animate"
         >
-          Dragee
+          {t("dragee")}
         </motion.p>
         <div className="w-2/5 lg:-mr-0 mt-4 -mt-[50%] translate-y-1/2">
           <motion.p

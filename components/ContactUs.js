@@ -2,6 +2,7 @@ import React from "react";
 import { Envelope, Facebook, Instagram } from "./Icon";
 import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const ContactUs = () => {
   const { t } = useTranslation("common");
@@ -38,15 +39,13 @@ const ContactUs = () => {
                 {t("contactBody")}
               </p>
               <div className="flex">
-                <div className="bg-[#FBCB00] rounded-full p-2">
-                  <Envelope className={"text-[#863A20]"} />
-                </div>
-                <div className="bg-white rounded-full p-2 mx-3">
+                <Link
+                  target="_blank"
+                  href={"https://instagram.com/datmeni.tm"}
+                  className="bg-white rounded-full p-2 my-2"
+                >
                   <Instagram className={"text-[#863A20]"} />
-                </div>
-                <div className="bg-white rounded-full p-2 mx-3">
-                  <Facebook className={"text-[#863A20]"} />
-                </div>
+                </Link>
               </div>
             </div>
             {/* right */}
@@ -65,7 +64,7 @@ const ContactUs = () => {
                     placeholder=" "
                   />
                   <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-[#AF6A53] duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text[#863A20] peer-focus:dark:text-[#863A20]">
-                    Your email
+                    {t("gallery.yourEmail")}
                   </label>
                 </div>
                 <div className="relative z-0 col-span-2">
@@ -76,7 +75,7 @@ const ContactUs = () => {
                     placeholder=" "
                   ></textarea>
                   <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-[#AF6A53] duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-[#863A20] peer-focus:dark:text-[#863A20]">
-                    Your message
+                    {t("gallery.yourMessage")}
                   </label>
                 </div>
               </div>
@@ -84,7 +83,7 @@ const ContactUs = () => {
                 type="submit"
                 className="mt-5 rounded-md bg-[#FBCB00] px-10 py-2 text-white"
               >
-                Send Message
+                {t("gallery.send")}
               </button>
             </div>
           </div>

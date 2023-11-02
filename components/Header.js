@@ -104,19 +104,19 @@ const Header = () => {
                 className="text-gray-800 cursor-pointer"
                 onClick={() => handleChangeLanguage("en")}
               >
-                English
+                {t("langs.en")}
               </li>
               <li
                 className="text-gray-800 cursor-pointer"
                 onClick={() => handleChangeLanguage("ru")}
               >
-                Russian
+                {t("langs.ru")}
               </li>
               <li
                 className="text-gray-800 cursor-pointer"
                 onClick={() => handleChangeLanguage("tr")}
               >
-                Turkish
+                {t("langs.tr")}
               </li>
             </ul>
           </motion.div>
