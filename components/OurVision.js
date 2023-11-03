@@ -12,7 +12,7 @@ const OurVision = () => {
     <div className="py-10 overflow-hidden">
       <div className="flex flex-col md:flex-row items-start justify-between contLg">
         {/* left */}
-        <div className="w-full md:w-1/2 relative">
+        <div className="w-full flex flex-col items-center md:items-start justify-center md:w-1/2 relative">
           {/* <Image
             width="500"
             height="500"

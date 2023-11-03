@@ -93,7 +93,7 @@ const OurMission = () => {
           </div>
         </div>
         {/* right */}
-        <div className="md:relative">
+        <div className="flex flex-col items-center md:items-start md:relative">
           <div style={{ width: "50px" }}>
             <AnimatedImg
               path="/images/mission-icon.webp"
