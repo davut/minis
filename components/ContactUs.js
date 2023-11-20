@@ -35,8 +35,15 @@ const ContactUs = () => {
               <h1 className="font-inter font-black text-5xl md:text-6xl leading-47 text-left text-top tracking-wide text-[#863A20] mb-4">
                 {t("contactUs")}
               </h1>
-              <p className=" leading-9 text-xl text-[#863A20]">
+              <p className="leading-9 text-xl text-[#863A20]">
                 {t("contactBody")}
+              </p>
+              <p className="my-2 leading-9 text-xl text-[#863A20]">
+                Adres: Jaý 8, k.Telekeçi, etrap Ak bugdaý, Anew, Türkmenistan
+                <br></br>
+                <a className="underline" href="tel:+99312596159">
+                  +99312596159
+                </a>
               </p>
               <div className="flex">
                 <Link
