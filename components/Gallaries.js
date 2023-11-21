@@ -3,13 +3,14 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { ChevronLeft, ChevronRight } from "./Icon";
 import AnimatedImg from "./AnimatedImg";
+import { motion } from "framer-motion";
 
 const Gallaries = () => {
   const { t } = useTranslation("common");
 
   return (
-    <div id="Gallary">
-      <div className="cont grid grid-cols-12">
+    <div id="Gallary" className="bg-white">
+      <div className="cont grid grid-cols-12 pt-10">
         <div className="col-span-12 md:col-span-4 ">
           <h1 className="font-inter font-black text-6xl leading-47 text-left text-top tracking-wide text-[#3A8DDE] mb-4">
             {t("galleryH1")}
@@ -110,6 +111,35 @@ const Gallaries = () => {
           </div>
           {/* end */}
         </div>
+      </div>
+      <div className="overflow-hidden -mb-12 md:-mb-12 lg:-mb-16">
+        <motion.svg
+          initial={{ x: "-50%" }}
+          // whileInView={{ y: 0, x: 0 }}
+          animate={{ x: "0%" }}
+          transition={{
+            // y: { duration: 1, yoyo: Infinity },
+            // x: { duration: 1, yoyo: Infinity },
+            repeat: Infinity,
+            duration: 15,
+            ease: "linear",
+          }}
+          className={"z-10 w-[200%]"}
+          width="2880"
+          height="79"
+          viewBox="0 0 2880 79"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2763.96 78.5001C2815.18 80.9001 2862.66 64.5001 2880 56.0001V-6.10352e-05H1440V56.0001C1455.17 60 1495.32 65.6 1534.53 56.0001C1583.55 44.0001 1601.56 37.5 1697.59 37.5C1793.62 37.5 1822.63 11.5 1898.66 16C1974.69 20.5 2009.7 56.0001 2073.72 56.0001C2137.74 56.0001 2169.99 47.0853 2299.3 24C2424 1.7373 2438.14 96.0001 2521.5 56.0001C2604.86 16 2699.94 75.5001 2763.96 78.5001Z"
+            fill="white"
+          />
+          <path
+            d="M1323.96 78.5001C1375.18 80.9001 1422.66 64.5001 1440 56.0001V-6.10352e-05H0V56.0001C15.1719 60 55.3192 65.6 94.5328 56.0001C143.55 44.0001 161.556 37.5 257.589 37.5C353.623 37.5 382.633 11.5 458.659 16C534.686 20.5 569.698 56.0001 633.72 56.0001C697.742 56.0001 729.989 47.0853 859.298 24C984 1.7373 998.137 96.0001 1081.5 56.0001C1164.86 16 1259.94 75.5001 1323.96 78.5001Z"
+            fill="white"
+          />
+        </motion.svg>
       </div>
     </div>
   );

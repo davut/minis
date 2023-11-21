@@ -8,26 +8,8 @@ const ContactUs = () => {
   const { t } = useTranslation("common");
 
   return (
-    <section id="contactUs">
-      <motion.svg
-        // initial={{ y: "100%", x: "-100%" }}
-        // whileInView={{ y: 0, x: 0 }}
-        // transition={{
-        //   y: { duration: 1, yoyo: Infinity },
-        //   x: { duration: 1, yoyo: Infinity },
-        // }}
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-        className="-mb-14"
-      >
-        <path
-          fill="#f4e9d5"
-          fillOpacity="1"
-          d="M0,64L30,101.3C60,139,120,213,180,234.7C240,256,300,224,360,192C420,160,480,128,540,149.3C600,171,660,245,720,256C780,267,840,213,900,192C960,171,1020,181,1080,186.7C1140,192,1200,192,1260,202.7C1320,213,1380,235,1410,245.3L1440,256L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
-        ></path>
-      </motion.svg>
-
-      <div className="bg-[#f4e9d5] pb-10">
+    <section id="contactUs" clas>
+      <div className="bg-[#f4e9d5] py-10 pt-16">
         <div className="cont">
           <div className="flex flex-wrap justify-between gap-3">
             {/* left */}
