@@ -22,45 +22,45 @@ export const quote = {
   },
 };
 
-const Nut = ({ src, className, index }) => {
-  const delay = index * 0.2; // Adjust the delay value as needed
-  const animationVariants = {
-    initial: {
-      opacity: 0,
-      y: 50,
-    },
-    animate: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        delay: delay,
-      },
-    },
-  };
+// const Nut = ({ src, className, index }) => {
+//   const delay = index * 0.2; // Adjust the delay value as needed
+//   const animationVariants = {
+//     initial: {
+//       opacity: 0,
+//       y: 50,
+//     },
+//     animate: {
+//       opacity: 1,
+//       y: 0,
+//       transition: {
+//         duration: 1,
+//         delay: delay,
+//       },
+//     },
+//   };
 
-  return (
-    <motion.div
-      variants={animationVariants}
-      initial="initial"
-      animate="animate"
-    >
-      <div className={`${className} `}>
-        {/* <Image width={120} height={185} src={} /> */}
-        <Image
-          width={"300"}
-          height={"300"}
-          src={src}
-          alt={"peanut image"}
-          className="blur-xm"
+//   return (
+//     <motion.div
+//       variants={animationVariants}
+//       initial="initial"
+//       animate="animate"
+//     >
+//       <div className={`${className} `}>
+//         {/* <Image width={120} height={185} src={} /> */}
+//         <Image
+//           width={"300"}
+//           height={"300"}
+//           src={src}
+//           alt={"peanut image"}
+//           className="blur-xm"
 
-          // placeholder="blur"
-          // blurDataURL="/images/m&m.png"
-        />
-      </div>
-    </motion.div>
-  );
-};
+//           // placeholder="blur"
+//           // blurDataURL="/images/m&m.png"
+//         />
+//       </div>
+//     </motion.div>
+//   );
+// };
 
 const HomePage = () => {
   // const myClass = css`
@@ -109,7 +109,7 @@ const HomePage = () => {
                 className="absolute -left-10 md:w-20 lg:-left-20 md:-top-14 w-10 lg:w-56 z-20"
               />
             </motion.div> */}
-            <Nut
+            {/* <Nut
               src={"/images/pngwing 3-1.webp"}
               className={
                 "absolute w-[120px] h-[185px] top-0 left-0 rounded-l-[16px] rotate-[106px] hidden md:block"
@@ -122,7 +122,7 @@ const HomePage = () => {
                 "absolute w-[120px] h-[185px] -top-[24%] -left-20 rounded-l-[16px] rotate-[106px]"
               }
               index={1}
-            />
+            /> */}
             {/* <Nut
               src={"/images/pngwing 10.webp"}
               className={
@@ -130,7 +130,7 @@ const HomePage = () => {
               }
               index={2}
             /> */}
-            <Nut
+            {/* <Nut
               src={"/images/pngwing 8.webp"}
               className={
                 "absolute w-[163px] h-[185px] bottom-10 -left-20 rounded-r-[34px] rotate-[75px] hidden md:block"
@@ -143,7 +143,7 @@ const HomePage = () => {
                 "absolute w-[104px] h-[123px] -top-10 left-24 rounded-r-[34px] rotate-[75px] blur-[05]"
               }
               index={4}
-            />
+            /> */}
 
             {/* right side items */}
             {/* <div className="flex justify-center items-center h-screen">
@@ -193,7 +193,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <Nut
+        {/* <Nut
           src={"/images/pngwing 1.webp"}
           className={
             "absolute w-[174px] h-[199px] top-10 -right-10 rounded-r-[34px] rotate-[75px] blur-[05]"
@@ -206,7 +206,7 @@ const HomePage = () => {
             "absolute w-[113px] h-[133px] bottom-20 -right-2 rounded-r-[34px] rotate--25 hidden md:block"
           }
           index={0}
-        />
+        /> */}
       </div>
       <div className="heroPage h-20"></div>
       <motion.svg
@@ -214,7 +214,7 @@ const HomePage = () => {
         // whileInView={{ y: 0, x: 0 }}
         animate={{ x: "0%" }}
         transition={{
-          // y: { duration: 1, yoyo: Infinity },
+          // y: { duration: 1, yoyo: Infinity }f,
           // x: { duration: 1, yoyo: Infinity },
           repeat: Infinity,
           duration: 15,

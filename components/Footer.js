@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="container mx-auto py-7">
+      <div className="py-7">
         <div className="flex flex-wrap items-center justify-between cont">
           <div className="flex items-center">
             <Logo className="mr-2" />
@@ -23,28 +23,28 @@ const Footer = () => {
                 <CustomLink
                   href="/"
                   title={t("navbar.about")}
-                  className="mr-4"
+                  className="mx-5"
                 />
               </li>
               <li>
                 <CustomLink
                   href="/products"
                   title={t("navbar.products")}
-                  className="mr-4"
+                  className="mx-5"
                 />
               </li>
               <li>
                 <CustomLink
                   href="/gallery"
                   title={t("navbar.gallery")}
-                  className="mr-4"
+                  className="mx-5"
                 />
               </li>
               <li>
                 <CustomLink
                   href="/contact"
                   title={t("navbar.contact")}
-                  className="mr-4"
+                  className="ml-5"
                 />
               </li>
             </ul>

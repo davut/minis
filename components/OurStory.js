@@ -2,8 +2,15 @@ import Image from "next/image";
 import AnimatedImg from "./AnimatedImg";
 import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
+import { useState } from "react";
 const OurStory = () => {
   const { t } = useTranslation("common");
+
+  const [showSecondBody, setShowSecondBody] = useState(false);
+
+  const handleReadMore = () => {
+    setShowSecondBody(!showSecondBody);
+  };
 
   return (
     <section id="OurStory">
@@ -31,9 +38,27 @@ const OurStory = () => {
             <p className="text-gray-600 leading-9 text-xl">
               {t("ourStoryBody1")}
             </p>
-            <p className="text-gray-600 leading-9 text-xl mt-4">
+            <motion.p
+              animate={
+                showSecondBody
+                  ? { height: "auto", opacity: 1 }
+                  : { height: 0, opacity: 0 }
+              }
+              className={`text-gray-600 ${
+                showSecondBody ? "h-0" : ""
+              } leading-9 text-xl mt-4 pointer-events-none`}
+            >
               {t("ourStoryBody2")}
-            </p>
+            </motion.p>
+            <div className="h-4"></div>
+            <motion.button
+              type="button"
+              onTap={handleReadMore}
+              // onClick={handleReadMore}
+              className="transition-all flex py-3 px-4 text-[#5E2A2B] font-bold rounded-full bg-[#FBCB00] hover:[box-shadow:2px_4px_0px_0px_#5E2917] my-2"
+            >
+              {showSecondBody ? t("readLess") : t("readMore")}
+            </motion.button>
           </div>
         </div>
       </div>

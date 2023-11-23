@@ -42,7 +42,7 @@ const Gallaries = () => {
           <div className="flex overflow-x-scroll pb-10 hide-scroll-bar">
             <div className="flex flex-nowrap lg:ml-40 md:ml-20 ">
               <div className="inline-block px-3">
-                <div className=" w-72 h-96 max-w-xs overflow-ehidden  shadow-md bg-[#FBCE00] hover:shadow-xl transition-shadow duration-300 ease-in-out relative">
+                <div className="w-72 h-96 max-w-xs overflow-hidden shadow-md bg-[#FBCE00] hover:shadow-xl transition-all duration-300 ease-in-out relative">
                   {/* <Image
                     alt="women"
                     src="/images/womanView.svg"
@@ -51,11 +51,11 @@ const Gallaries = () => {
                     className=" w-72 h-96 object-cover  absolute bottom-10 left-4"
                   /> */}
                   <AnimatedImg
-                    alt="women"
-                    path="/images/minis-gallery-1.webp"
-                    // width="500"
-                    // height="500"
-                    className=" w-72 h-96 object-cover  absolute bottom-10 left-4"
+                    alt="Gallery"
+                    path="/images/gallery-image-1.webp"
+                    width="500"
+                    height="500"
+                    className="object-cover h-full absolute"
                   />
                   {/* <button className="absolute top-[50%] left-[50%] text-xl text-white z-20">
                     View
@@ -63,13 +63,13 @@ const Gallaries = () => {
                 </div>
               </div>
               <div className="inline-block px-3">
-                <div className=" w-72 h-96 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <div className=" w-72 h-96 max-w-xs overflow-hidden shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   <Image
                     alt="icon"
                     src="/images/umbrella.webp"
                     width="500"
                     height="500"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover "
                     priority
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                   />
@@ -83,7 +83,7 @@ const Gallaries = () => {
                 </div>
               </div>
               <div className="inline-block px-3">
-                <div className=" w-72 h-96 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                <div className=" w-72 h-96 max-w-xs overflow-hidden shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
                   {" "}
                   <Image
                     alt="icon"

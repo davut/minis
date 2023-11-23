@@ -40,7 +40,7 @@ const OurProduct = () => {
           {product.map((elem, i) => (
             <div
               key={i}
-              className={`py-10 px-7 rounded-lg ${elem.color} relative lg:flex-1 flex flex-col justify-center items-center mt-20 w-96 my-20`}
+              className={`py-10 px-7 rounded-[20px] h-[595px] ${elem.color} relative lg:flex-1 flex flex-col justify-center items-center mt-20 w-96 my-20`}
             >
               {/* <div className="flex justify-between">*/}
               <div className="absolute left-0 md:left-2 lg:left-10 top-20 rounded-2xl">

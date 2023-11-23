@@ -107,9 +107,9 @@ const OurMission = () => {
             <AnimatedText text={t("missionH1")} direction="left" />
           </h1>
           <p className="text-gray-600 leading-9 text-xl">{t("missionBody1")}</p>
-          <p className="text-gray-600 leading-9 text-xl mt-4">
+          {/* <p className="text-gray-600 leading-9 text-xl mt-4">
             {t("missionBody2")}
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

@@ -23,8 +23,8 @@ export const CustomLink = ({ href, title, className = "" }) => {
       >
         {title}
         <span
-          className={`h-[1px] inline-block bg-[#FAC800] w-0 absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
-             dark:bg-light
+          className={`h-[2px] inline-block bg-[#FAC800] w-0 absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
+             dark:bg-gray-500
             `}
         >
           &nbsp;
@@ -67,7 +67,7 @@ const Header = () => {
   }
 
   const PopUpLanguage = ({ className }) => (
-    <div className="flex  items-center">
+    <div className="flex items-center">
       <div
         className="flex items-center relative cursor-pointer"
         onClick={togglePopup}
@@ -157,24 +157,24 @@ const Header = () => {
           </button>
 
           {/* Desktop nav */}
-          <div className=" justify-between items-center hidden lg:flex">
+          <div className="justify-between items-center hidden lg:flex">
             <nav className=" mr-16">
               <span onClick={() => scrollToPage("OurStory")}>
                 <CustomLink
                   // href="#OurStory"
                   title={t("navbar.about")}
-                  className="mx-2"
+                  className="mx-5"
                 />
               </span>
               <span onClick={() => scrollToPage("OurProduct")}>
-                <CustomLink title={t("navbar.products")} className="mx-2" />
+                <CustomLink title={t("navbar.products")} className="mx-5" />
               </span>
               <span onClick={() => scrollToPage("Gallary")}>
-                <CustomLink title={t("navbar.gallery")} className="mx-2" />
+                <CustomLink title={t("navbar.gallery")} className="mx-5" />
               </span>
 
               <span onClick={() => scrollToPage("contactUs")}>
-                <CustomLink title={t("navbar.contact")} className="mx-2" />
+                <CustomLink title={t("navbar.contact")} className="mx-5" />
               </span>
             </nav>
             {/* popup large */}
