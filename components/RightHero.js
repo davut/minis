@@ -4,86 +4,129 @@ import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { quote } from "./HomePage";
 
-const RightHero = () => {
+const RightHero = ({ images, currentIndex }) => {
   const { t, i18n } = useTranslation("common");
   const currentLanguage = i18n.language;
-  console.log(currentLanguage);
   return (
-    <div className="flex items-center justify-center just">
-      <div className="flex items-center justify-center">
-        <motion.p
-          className="heroRightText  absolute -top-10 ml-10 md:-top-[70px] text-7xl"
-          variants={quote}
-          initial="initial"
-          animate="animate"
-        >
-          {t("dragee")}
-        </motion.p>
-        <div className="w-2/5 lg:-mr-0 mt-4 -mt-[50%] translate-y-1/2">
+    <div className="relative">
+      <div className="relative items-end">
+        {/* Text on the Left */}
+        <div className="flex flex-col-reverse">
           <motion.p
-            className={`heroRightText  -translate-y-[50%] rotate-90 text-9xl md:text-[160px] `}
             initial={{ x: 100, opacity: 0, rotate: -90 }}
             whileInView={{ x: 0, opacity: 1, rotate: -90 }}
+            className={`heroRightText absolute text-8xl top-[50%] text-white font-bold -rotate-90 ${
+              currentLanguage == "ru" ? "-left-48" : "-left-40"
+            }`}
           >
             {t("mini")}
           </motion.p>
         </div>
 
-        <div className="w-5/12 -ml-16 ldg:-ml-32 z-10">
-          {/* <img
-            className="object-cover"
-            src="https://kitwind.io/assets/kometa/two-girls-phone.png"
-            alt=""
-          /> */}
-          <Image
-            width="500"
-            height="500"
-            src="/images/yellow-minis.webp"
-            alt="minis"
-            className="w-[200px] md:w-[230px] z-30"
-            placeholder="blur"
-            blurDataURL="/images/yellow-minis.webp"
-          />
+        {/* Image */}
+        <div className="relative z-10">
+          <div className="z-10">
+            <motion.img
+              key={images[currentIndex]}
+              src={images[currentIndex]}
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -100, opacity: 0 }}
+              transition={{ duration: 1 }}
+              alt="Your Image"
+              className="w-[200px] md:w-[230px] z-20"
+              style={{ zIndex: 10 }}
+            />
+          </div>
+
+          {/* Text on Top */}
+          <div className="text-white z-0">
+            <motion.p
+              variants={quote}
+              initial="initial"
+              animate="animate"
+              className="heroRightText -left-3 z-0 absolute -top-16 font-bold text-8xl"
+            >
+              {t("dragee")}
+            </motion.p>
+          </div>
         </div>
-        <div
-          className={`w-2/5 ${
-            currentLanguage === "en"
-              ? "-ml-16"
-              : currentLanguage === "ru"
-              ? "-ml-[100px]"
-              : "-ml-[80px]"
-          } ${currentLanguage === "en" ? "sm:-ml-[120px]" : "sm:-ml-[120px]"} ${
-            currentLanguage === "en"
-              ? "md:-ml-[70px]"
-              : currentLanguage === "ru"
-              ? "md:-ml-[120px]"
-              : ""
-          } ${
-            currentLanguage === "en"
-              ? "lg:-ml-[80px]"
-              : currentLanguage === "ru"
-              ? "lg:-ml-[130px]"
-              : "lg:-ml-[100px]"
-          }  ${
-            currentLanguage === "en"
-              ? "xl:-ml-[70px]"
-              : currentLanguage === "ru"
-              ? "xl:-ml-[130px]"
-              : "xl:-ml-[100px]"
-          } -mt-[50%] translate-y-1/2 lg:-mr-7 `}
+      </div>
+      {/* Text on the Right */}
+      <div className="flex flex-col">
+        <motion.p
+          key={currentIndex}
+          initial={{ x: -100, opacity: 0, rotate: 90 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1, rotate: 90 }}
+          duration={1}
+          className="heroRightText absolute rotate-90 top-[40%] left-24 text-8xl text-white font-bold"
         >
-          <motion.p
-            className="heroRightText h-[100px] text-8xl md:text-8xl rotate-900 -translate-x-1/2  md:text-[160px] text-center  lg:text-[120px]"
-            initial={{ x: -100, opacity: 0, rotate: 90 }}
-            whileInView={{ x: 0, opacity: 1, rotate: 90 }}
-            transition={{ delay: 0.6 }}
-          >
-            {t("peanut")}
-          </motion.p>
-        </div>
+          {t(`home.h1-${currentIndex + 1}`)}
+        </motion.p>
       </div>
     </div>
   );
+  // return (
+  //   <div className="flex items-center justify-center just">
+  //     <div className="flex items-center justify-center">
+  //       <motion.p
+  //         className="heroRightText"
+  //         variants={quote}
+  //         initial="initial"
+  //         animate="animate"
+  //       >
+  //         {t("dragee")}
+  //       </motion.p>
+  //       <div className="">
+  //         <motion.p
+  //           className={`heroRightText`}
+  //           initial={{ x: 100, opacity: 0, rotate: -90 }}
+  //           whileInView={{ x: 0, opacity: 1, rotate: -90 }}
+  //         >
+  //           {t("mini")}
+  //         </motion.p>
+  //       </div>
+
+  //       <div className="w-5/12 -ml-16 lg:-ml-32 z-10">
+  //         {/* <img
+  //           className="object-cover"
+  //           src="https://kitwind.io/assets/kometa/two-girls-phone.png"
+  //           alt=""
+  //         /> */}
+  //         <motion.img
+  //           key={images[currentIndex]}
+  //           src={images[currentIndex]}
+  //           initial={{ y: 100, opacity: 0 }}
+  //           animate={{ y: 0, opacity: 1 }}
+  //           exit={{ y: -100, opacity: 0 }}
+  //           transition={{ duration: 1 }}
+  //           width="500"
+  //           height="500"
+  //           alt="minis"
+  //           className="w-[200px] md:w-[230px] z-30"
+  //           // placeholder="blur"
+  //           // blurDataURL="/images/yellow-minis.webp"
+  //         />
+  //       </div>
+  //       <div className={``}>
+  //         <motion.p
+  //           key={currentIndex}
+  //           className="heroRightText"
+  //           initial={{ x: -100, opacity: 0, rotate: 90 }}
+  //           animate={{ y: 0, opacity: 1 }}
+  //           exit={{ y: -100, opacity: 0 }}
+  //           whileInView={{ x: 0, opacity: 1, rotate: 90 }}
+  //           duration={1}
+  //           // transition={{ delay: 1 }}
+  //         >
+  //           {t(`home.h1-${currentIndex + 1}`)}
+  //         </motion.p>
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
 };
 
 export default RightHero;

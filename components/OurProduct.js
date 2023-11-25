@@ -72,7 +72,7 @@ const OurProduct = () => {
               <h2 className="font-inter font-bold text-3xl leading-47 text-white my-5 text-center">
                 {elem.name}
               </h2>
-              <p className="text-white leading-9 text-xm md:text-lg text-center">
+              <p className="text-white leading-9 text-xm md:text-lg text-center overflow-y-scroll scrollbar-hide">
                 {elem.desc}
               </p>
             </div>

@@ -3,7 +3,9 @@
   "navbar.products": "Products",
   "navbar.gallery": "Gallery",
   "navbar.contact": "Contact us",
-  "home.h1": "Peanut",
+  "home.h1-1": "Peanut",
+  "home.h1-2": "Choco",
+  "home.h1-3": "Chrispy",
 
   "ourProductA": "Peanut dragee",
   "ourProductB": "Crispy dragee",
@@ -25,7 +27,9 @@
   "langs.ru": "Russian",
   "langs.tr": "Turkish",
 
-  "peanutMainBody": "Discover a delicious world with Minis' peanut-filled Mini Dragee. These small, round confections combine the satisfying crunch of a candy shell with the rich and enticing flavor of peanuts.",
+  "homeMainBody-1": "Discover a delicious world with Minis' peanut-filled Mini Dragee. These small, round confections combine the satisfying crunch of a candy shell with the rich and enticing flavor of peanuts.",
+  "homeMainBody-2": "Explore the indulgent universe of Minis' Chocolate Mini Dragee. Each piece is a delightful blend of smooth, creamy chocolate encased in a crisp candy shell, offering a symphony of textures and rich flavors that tantalize the taste buds",
+  "homeMainBody-3": "Dive into the crunchy delight of Minis' Crispy Mini Dragee. These bite-sized treats feature a light, airy crispness, enveloped in a glossy candy coating. The perfect harmony of lightness and sweetness makes them an irresistible snack for any occasion.",
 
   "ourStoryBody1": "Minis was born from a simple yet powerful idea: to create miniature delights that bring joy. Founded by a team of food enthusiasts, we've dedicated ourselves to crafting bite-sized treats that not only satisfy your taste buds but also brighten your day. Our journey began with the vision of redefining snacking. We sought to blend quality, creativity, and deliciousness, resulting in the birth of Minis Mini Dragee with Peanut. At Minis, we're unwavering in our commitment to excellence. We use top-notch ingredients like whole peanuts, enrobed in a variety of candy coatings. This meticulous approach creates snacks that are not only delicious but also visually enticing.",
 
