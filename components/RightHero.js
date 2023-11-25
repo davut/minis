@@ -13,8 +13,12 @@ const RightHero = ({ images, currentIndex }) => {
         {/* Text on the Left */}
         <div className="flex flex-col-reverse">
           <motion.p
+            key={t("mini") + currentIndex}
             initial={{ x: 100, opacity: 0, rotate: -90 }}
-            whileInView={{ x: 0, opacity: 1, rotate: -90 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 100, opacity: 0, rotate: -90 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            duration={1}
             className={`heroRightText absolute text-8xl top-[50%] text-white font-bold -rotate-90 ${
               currentLanguage == "ru" ? "-left-48" : "-left-40"
             }`}
@@ -29,10 +33,11 @@ const RightHero = ({ images, currentIndex }) => {
             <motion.img
               key={images[currentIndex]}
               src={images[currentIndex]}
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 1 }}
+              initial={{ y: 100 }}
+              animate={{ y: 0 }}
+              exit={{ y: -100 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              duration={1}
               alt="Your Image"
               className="w-[200px] md:w-[230px] z-20"
               style={{ zIndex: 10 }}
@@ -42,9 +47,12 @@ const RightHero = ({ images, currentIndex }) => {
           {/* Text on Top */}
           <div className="text-white z-0">
             <motion.p
-              variants={quote}
-              initial="initial"
-              animate="animate"
+              key={t("dragee" + currentIndex)}
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              duration={1}
               className="heroRightText -left-3 z-0 absolute -top-16 font-bold text-8xl"
             >
               {t("dragee")}
