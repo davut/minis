@@ -112,13 +112,11 @@ const OurProduct = () => {
     <section id="OurProduct" className="-mb-1">
       <div className="bg-[#f4e9d5] py-28">
         {/* */}
-        <div className="pb-10 mb-10 flex items-center justify-start md:justify-center lg:justify-center overflow-x-scroll">
+        <div className="pb-10 mb-10 flex items-center justify-start md:justify-center lg:justify-center overflow-x-scroll scrollbar-hide">
           {buttons.map((elem, i) => (
             <motion.button
               key={elem.name}
-              initial={{ scale: 0 }}
               whileTap={{ scale: 0.9 }}
-              whileInView={{ scale: 1 }}
               onClick={() => {
                 setSelectedButtonIndex(i);
                 setButtons((prev) =>

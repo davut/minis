@@ -52,6 +52,16 @@ html::-webkit-scrollbar-thumb {
   display: none;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .glassBg {
   background: white;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
