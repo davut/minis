@@ -4,9 +4,55 @@ import { useTranslation } from "next-i18next";
 import { ChevronLeft, ChevronRight } from "./Icon";
 import AnimatedImg from "./AnimatedImg";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Gallaries = () => {
   const { t } = useTranslation("common");
+
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const images = [
+    {
+      id: 0,
+      src: "/images/gallery-choco-1kg.webp",
+      alt: "1kg chocolate dragee",
+    },
+    {
+      id: 1,
+      src: "/images/gallery-yellow-1kg.webp",
+      alt: "1kg peanut dragee",
+    },
+    {
+      id: 2,
+      src: "/images/gallery-choco.webp",
+      alt: "chocolate dragee",
+    },
+    {
+      id: 3,
+      src: "/images/gallery-blue.webp",
+      alt: "Chrispy dragee",
+    },
+    {
+      id: 4,
+      src: "/images/gallery-cornetto1.webp",
+      alt: "cornetto",
+    },
+    {
+      id: 5,
+      src: "/images/gallery-cornetto2.webp",
+      alt: "cornetto",
+    },
+    {
+      id: 6,
+      src: "/images/gallery-choco-1kg2.webp",
+      alt: "1kg chocolate dragee",
+    },
+    {
+      id: 7,
+      src: "/images/gallery-yellow.webp",
+      alt: "Peanut dragee",
+    },
+  ];
 
   return (
     <div id="Gallary" className="bg-white">
@@ -19,20 +65,32 @@ const Gallaries = () => {
             {t("galleryBody")}
           </p>
           <div className="flex gap-x-5 my-10">
-            <div className=" w-16 h-16 rounded-full cursor-pointer bg-[#fbce00] flex justify-center items-center">
+            {/* <div className=" w-16 h-16 rounded-full cursor-pointer bg-[#fbce00] flex justify-center items-center">
               <ChevronLeft
+                onClick={() => {
+                  // scroll to left
+                  if (currentImage > 0) {
+                    setCurrentImage(currentImage - 1);
+                  }
+                }}
                 className={"text-lg text-white font-bold"}
                 width="10"
                 height="10"
               />
-            </div>
-            <div className=" w-16 h-16 rounded-full cursor-pointer bg-[#fbce00] flex justify-center items-center">
+            </div> */}
+            {/* <div className=" w-16 h-16 rounded-full cursor-pointer bg-[#fbce00] flex justify-center items-center">
               <ChevronRight
+                onClick={() => {
+                  // scroll to right
+                  if (currentImage < images.length - 1) {
+                    setCurrentImage(currentImage + 1);
+                  }
+                }}
                 className={"text-lg text-white font-bold"}
                 width="10"
                 height="10"
               />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className=" col-span-12 md:col-span-8 relative">
@@ -41,72 +99,22 @@ const Gallaries = () => {
 
           <div className="flex overflow-x-scroll pb-10 hide-scroll-bar">
             <div className="flex flex-nowrap lg:ml-40 md:ml-20 ">
-              <div className="inline-block px-3">
-                <div className="w-72 h-96 max-w-xs overflow-hidden shadow-md bg-[#FBCE00] hover:shadow-xl transition-all duration-300 ease-in-out relative">
-                  {/* <Image
-                    alt="women"
-                    src="/images/womanView.svg"
-                    width="500"
-                    height="500"
-                    className=" w-72 h-96 object-cover  absolute bottom-10 left-4"
-                  /> */}
-                  <AnimatedImg
-                    alt="Gallery"
-                    path="/images/gallery-image-1.webp"
-                    width="500"
-                    height="500"
-                    className="object-cover h-full absolute"
-                  />
-                  {/* <button className="absolute top-[50%] left-[50%] text-xl text-white z-20">
-                    View
-                  </button> */}
+              {images.map((image, index) => (
+                <div className="inline-block px-3">
+                  <div className=" w-72 h-96 max-w-xs overflow-hidden shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                    <Image
+                      id={image.id}
+                      alt={image.alt}
+                      src={image.src}
+                      width="500"
+                      height="500"
+                      className="w-full h-full object-cover "
+                      priority
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="inline-block px-3">
-                <div className=" w-72 h-96 max-w-xs overflow-hidden shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                  <Image
-                    alt="icon"
-                    src="/images/umbrella.webp"
-                    width="500"
-                    height="500"
-                    className="w-full h-full object-cover "
-                    priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-                  />
-                  {/* <AnimatedImg
-                    alt="icon"
-                    path="/images/RectangleMission 36.svg"
-                    // width="500"
-                    // height="500"
-                    className="w-full h-full object-cover"
-                  /> */}
-                </div>
-              </div>
-              <div className="inline-block px-3">
-                <div className=" w-72 h-96 max-w-xs overflow-hidden shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                  {" "}
-                  <Image
-                    alt="icon"
-                    src="/images/cornetto.webp"
-                    width="500"
-                    height="500"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              {/* <div className="inline-block px-3">
-                <div className=" w-72 h-96 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                  {" "}
-                  <Image
-                    alt="icon"
-                    src="/images/RectangleMission 36.svg"
-                    width="500"
-                    height="500"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div> */}
-              <div className="absolute top-0 right-0 w-20 h-full bg-white bg-opacity-50 blur-sm shadow"></div>
+              ))}
             </div>
           </div>
           {/* end */}

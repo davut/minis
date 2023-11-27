@@ -70,7 +70,7 @@ const ContactUs = () => {
               </div>
               <button
                 type="submit"
-                className="mt-5 rounded-md bg-[#FBCB00] px-10 py-2 text-white"
+                className="mt-5 rounded-md bg-[#FBCB00] px-10 py-2 text-[#5E2A2B] font-bold hover:[box-shadow:2px_4px_0px_0px_#5E2917]"
               >
                 {t("gallery.send")}
               </button>
