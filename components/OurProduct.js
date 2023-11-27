@@ -293,7 +293,7 @@ const OurProduct = () => {
                       key={elem.img[elem.currentIndex]}
                       src={elem.img[elem.currentIndex]}
                       className={
-                        "h-56 md:w-44 lg:w-44 object-cover overflow-visible overflow-x-visible"
+                        "w-56 md:h-48 lg:h-56 md:w-44 lg:w-44 object-cover overflow-visible overflow-x-visible"
                       }
                       initial={{ scale: 0.8, opacity: 0 }}
                       whileInView={{ y: -70, opacity: 1 }}
