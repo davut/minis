@@ -9,7 +9,7 @@ const ContactUs = () => {
 
   return (
     <section id="contactUs" clas>
-      <div className="bg-[#f4e9d5] py-10 pt-16">
+      <div className="bg-[#FFF1D9] py-10 pt-16">
         <div className="cont">
           <div className="flex flex-wrap justify-between gap-3">
             {/* left */}

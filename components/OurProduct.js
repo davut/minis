@@ -110,7 +110,7 @@ const OurProduct = () => {
 
   return (
     <section id="OurProduct" className="-mb-1">
-      <div className="bg-[#f4e9d5] py-28">
+      <div className="bg-[#FFF1D9] py-28">
         {/* */}
         <div className="pb-10 mb-10 flex items-center justify-start md:justify-center lg:justify-center overflow-x-scroll scrollbar-hide">
           {buttons.map((elem, i) => (
@@ -292,7 +292,9 @@ const OurProduct = () => {
                       // height={"300"}
                       key={elem.img[elem.currentIndex]}
                       src={elem.img[elem.currentIndex]}
-                      className={"h-56 md:w-44 lg:w-44 object-cover"}
+                      className={
+                        "h-56 md:w-44 lg:w-44 object-cover overflow-visible"
+                      }
                       initial={{ scale: 0.8, opacity: 0 }}
                       whileInView={{ y: -70, opacity: 1 }}
                       animate={{ scale: 1, opacity: 1 }}
@@ -335,7 +337,7 @@ const OurProduct = () => {
               ))}
         </div>
       </div>
-      <div className="bg-[#f4e9d5] h-20"></div>
+      <div className="bg-[#FFF1D9] h-20"></div>
       <div className="z-10 overflow-x-hidden -mt-8 md:-mt-10 lg:-mt-20">
         <motion.svg
           initial={{ x: "-50%" }}
