@@ -257,7 +257,7 @@ const OurProduct = () => {
                       {elem.desc}
                     </p>
                   </div>
-                  <div className="flex justify-center flex-grow">
+                  <div className="flex justify-center flex-grow overflow-visible">
                     <div className="absolute top-2/4 left-0 pl-4 md:left-2/4 rounded-2xl">
                       {" "}
                       <ChevronLeft
@@ -293,7 +293,7 @@ const OurProduct = () => {
                       key={elem.img[elem.currentIndex]}
                       src={elem.img[elem.currentIndex]}
                       className={
-                        "h-56 md:w-44 lg:w-44 object-cover overflow-visible"
+                        "h-56 md:w-44 lg:w-44 object-cover overflow-visible overflow-x-visible"
                       }
                       initial={{ scale: 0.8, opacity: 0 }}
                       whileInView={{ y: -70, opacity: 1 }}
