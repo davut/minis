@@ -11,6 +11,9 @@ const Catalog = () => {
     setShowPreview(!showPreview);
   };
 
+  // Use absolute path for PDF to avoid language prefix issues
+  const pdfPath = "/catalogs/minis-catalog.pdf";
+
   return (
     <section id="catalog" className="py-20 bg-white">
       <div className="cont">
@@ -41,9 +44,10 @@ const Catalog = () => {
               {t("catalog.previewButton") || "Preview Catalog"}
             </button>
             
-            <Link 
-              href="/catalogs/minis-catalog.pdf" 
+            <a 
+              href={pdfPath}
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 bg-[#FBCB00] px-8 py-3 rounded-md text-[#5E2A2B] font-bold hover:[box-shadow:2px_4px_0px_0px_#5E2917] transition-all"
             >
               <svg 
@@ -57,7 +61,7 @@ const Catalog = () => {
                 <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
               </svg>
               {t("catalog.downloadButton") || "Download Catalog"}
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -79,15 +83,16 @@ const Catalog = () => {
             </div>
             <div className="flex-1 p-4">
               <iframe 
-                src="/catalogs/minis-catalog.pdf" 
+                src={pdfPath}
                 className="w-full h-full border-0"
                 title="Minis Catalog"
               ></iframe>
             </div>
             <div className="p-4 border-t flex justify-end">
-              <Link 
-                href="/catalogs/minis-catalog.pdf" 
+              <a 
+                href={pdfPath}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-[#FBCB00] px-6 py-2 rounded-md text-[#5E2A2B] font-bold hover:[box-shadow:2px_4px_0px_0px_#5E2917] transition-all"
               >
                 <svg 
@@ -101,7 +106,7 @@ const Catalog = () => {
                   <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
                 </svg>
                 {t("catalog.download") || "Download"}
-              </Link>
+              </a>
             </div>
           </div>
         </div>
