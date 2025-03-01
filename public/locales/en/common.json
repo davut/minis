@@ -59,5 +59,11 @@
   "contactBody": "We'd love to hear from you. Get in touch with us, and our friendly team will be here to assist you. Your thoughts matter, and we're here to ensure your experience with us is as delightful as our snacks. Contact us today!",
 
   "readMore": "Read More",
-  "readLess": "Collapse"
+  "readLess": "Collapse",
+    "catalog.title": "Minis Catalog",
+"catalog.previewButton": "Preview Catalog",
+"catalog.downloadButton": "Download Catalog",
+"catalog.previewTitle": "Minis Catalog Preview",
+"catalog.download": "Download"
+
 }

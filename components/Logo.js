@@ -4,7 +4,7 @@ import React from "react";
 export const Logo = () => {
   return (
     <Image
-      src="/images/logo.webp"
+      src="/images/minis-logo.webp"
       width={300}
       height={300}
       alt="logo"

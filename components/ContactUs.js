@@ -1,5 +1,5 @@
 import React from "react";
-import { Envelope, Facebook, Instagram } from "./Icon";
+import { Envelope, Facebook, Instagram, TikTok, WhatsApp } from "./Icon";
 import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -8,7 +8,7 @@ const ContactUs = () => {
   const { t } = useTranslation("common");
 
   return (
-    <section id="contactUs" clas>
+    <section id="contactUs">
       <div className="bg-[#FFF1D9] py-10 pt-16">
         <div className="cont">
           <div className="flex flex-wrap justify-between gap-3">
@@ -23,17 +23,32 @@ const ContactUs = () => {
               <p className="my-2 leading-9 text-xl text-[#863A20]">
                 Adres: Jaý 8, k.Telekeçi, etrap Ak bugdaý, Anew, Türkmenistan
                 <br></br>
-                <a className="underline" href="tel:+99312596159">
-                  +99312596159
+                <a className="underline" href="tel:+99365805980">
+                +99365805980
                 </a>
               </p>
-              <div className="flex">
+              <div className="flex gap-2">
                 <Link
                   target="_blank"
-                  href={"https://instagram.com/datmeni.tm"}
+                  href={"https://instagram.com/minis_tm"}
                   className="bg-white rounded-full p-2 my-2"
                 >
                   <Instagram className={"text-[#863A20]"} />
+                </Link>
+                <Link
+                  target="_blank"
+                  href={"https://tiktok.com/@minis_tm"}
+                  className="bg-white rounded-full p-2 my-2"
+                >
+                  <TikTok className={"text-[#863A20]"} />
+                </Link>
+                {/* Whatsapp */}
+                <Link
+                  target="_blank"
+                  href={"https://wa.me/99365805980"}
+                  className="bg-white rounded-full p-2 my-2"
+                >
+                  <WhatsApp className={"text-[#863A20]"} />
                 </Link>
               </div>
             </div>

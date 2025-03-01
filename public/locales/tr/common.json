@@ -61,5 +61,11 @@
   "contactBody": "Bizimle iletişime geçin, ekibimiz size yardımcı olacaktır. Düşünceleriniz önemlidir ve sizinle deneyiminizi atıştırmalıklarımız kadar neşeli hale getirmek için buradayız. Bugün bizimle iletişime geçin!",
 
   "readMore": "Daha Fazla Oku",
-  "readLess": "Daralt"
+  "readLess": "Daralt",
+
+  "catalog.title": "Minis Kataloğu",
+  "catalog.previewButton": "Kataloğu Önizle",
+  "catalog.downloadButton": "Kataloğu İndir",
+  "catalog.previewTitle": "Minis Katalog Önizlemesi",
+  "catalog.download": "İndir"
 }
